@@ -1,0 +1,63 @@
+<!-- spy-story-8.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두레교회 청년부 갓스플랜</title>
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body class="spy">
+    <header>
+        <h1>산업스파이</h1>
+        <!-- Add any other header content here -->
+    </header>
+
+    <div style="line-height:150%;">
+        <br>
+    </div>
+    
+    <main>
+        <section>
+
+            <p class="small-title">
+                <b>4. 용의자 조사 004 - 나팀장 (1)</b><br>
+            </p>
+            <!-- <img src="spy-puzzle-assets/.png" class="evidence-images"> -->
+            <p> 
+                최근 나팀장은 자신의 팀원인 조사원이 만든 프로젝트가 탐이 나 자신의 이름으로 김부장에게 결재를 올렸으나 김부장은 반려하였습니다.<br>
+                그런데 며칠 후 김부장이 그 프로젝트를 자신의 이름으로 올려 성과를 낸 사실을 알게 되었습니다.<br></br>
+
+                나팀장은 술에 잔뜩 취하여 김부장의 비리를 모든 기업의 사원들이 제보할 수 있는 커뮤니티 사이트에 폭로하였습니다. <br>
+
+                L기업 사무실에서 나팀장의 자리에 가서 단서를 한 번 살펴 봐주세요.<br>
+            </p>
+
+        </section>
+        <!-- Add more sections or content here -->
+    </main>
+ 
+    <div class = "spy-passcode-container">
+        <div class = "spy-passcodeInput">
+            <input type="text" inputmode="numeric" style="text-transform: uppercase" id='ist' maxlength="1" onkeyup="clickEvent(this,'sec')">
+            <input type="text" inputmode="numeric" style="text-transform: uppercase" id="sec" maxlength="1" onkeyup="clickEvent(this,'third')">
+            <input type="text" inputmode="numeric" style="text-transform: uppercase" id="third" maxlength="1" onkeyup="clickEvent(this,'fourth')">
+            <input type="text" inputmode="numeric" style="text-transform: uppercase" id="fourth" maxlength="1" onkeyup="clickEvent(this,'fifth')">
+            <input type="text" inputmode="numeric" style="text-transform: uppercase" id="fifth" maxlength="1" onkeyup="clickEvent(this, 'sixth')">
+            <input type="text" inputmode="numeric" style="text-transform: uppercase" id="sixth" maxlength="1">
+        </div>
+        <button class="emptyInputButton" onclick="emptyInput()">지우기</button>
+        <button onclick="checkPasscodeSs8()">확인</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 두레교회 청년부. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
+
+

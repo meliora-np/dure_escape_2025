@@ -1,0 +1,67 @@
+<!-- laptop-story-1.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두레교회 청년부 갓스플랜</title>
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body class="laptop">
+    
+    <header>
+        <h1>노트북 도난사건</h1>
+        <!-- Add any other header content here -->
+    </header>
+
+    <div style="line-height:150%;">
+        <br>
+    </div>
+    
+    <main>
+        <section>
+
+            <p class="small-title">
+                <b>1. 범행시간 확인 </b><br>
+            </p>
+
+            <p> 
+                <b>리슨카페의 창고</b>에는 주인만 열람할 수 있는 CCTV가 있습니다.<br>
+                이 CCTV를 확인하면 <b>범행 시간</b>을 확인할 수 있을 것입니다.<br></br>
+
+                카페 창고에 있는 물건들을 활용해 CCTV 파일을 <br> 
+                열 수 있는 <b>아이디와 비밀번호</b>를 찾으세요.  <br></br>
+                <br>
+            </p>
+
+            <img src="laptop-puzzle-assets/laptop-business-license.png" class="blurry-hint-images">
+
+            <!-- <div class="next-story-button"> 
+                <button onclick="navigateToNextStory('laptop-story-2.html')">다음 이야기</button>
+            </div> -->
+            
+            <form id="loginForm" class="userInput">
+                <label for="username">아이디:</label>
+                <input type="text" id="username" name="username" class="laptop-input"><br>
+        
+                <label for="password">비밀번호:</label>
+                <input type="password" inputmode="numeric" id="password" name="password" class="laptop-input"><br>
+        
+                <div class="next-story-button">
+                    <button type="button" onclick="checkLoginls1()">다음 이야기</button>
+                </div>
+            </form>
+
+        </section>
+        <!-- Add more sections or content here -->
+    </main>
+
+    <footer>
+        <p>&copy; 2023 두레교회 청년부. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

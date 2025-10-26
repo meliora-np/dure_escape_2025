@@ -1,0 +1,66 @@
+<!-- laptop-story-8.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두레교회 청년부 갓스플랜</title>
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body class="laptop">
+    <header>
+        <h1>노트북 도난사건</h1>
+        <!-- Add any other header content here -->
+    </header>
+
+    <div style="line-height:150%;">
+        <br>
+    </div>
+    
+    <main>
+        <section>
+
+            <p class="small-title">
+                <b>4. 용의자 조사 003 - 최백수 (1) </b><br>
+            </p>
+
+            <p> 
+                마지막 용의자는 <b>최백수</b>입니다. <br></br>
+
+                최백수는 제가 조사한 바로 피해자인 주인공과 마주치는 일이 많았다고 합니다.<br>
+                그녀가 주인공 씨가 자리를 비울 때마다 몰래 그의 노트북을 만지는 장면을 목격한 사람들이 다수 있는 것으로 확인했습니다. <br></br>
+
+                최백수의 독서실 자리에는 <b>두 개의 일정표</b>가 존재한다고 합니다. <br>
+
+                최백수의 알리바이를 찾아 비밀번호를 입력하세요.<br></br>
+            </p>
+
+            <!-- <img src="laptop-puzzle-assets/laptop-game-posters-hint.png" class="blurry-hint-images"> -->
+
+        </section>
+        <!-- Add more sections or content here -->
+    </main>
+ 
+    <div class = "passcode-container">
+        <div class = "passcodeInput">
+            <input type="text" id='ist' inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'sec')">
+            <input type="text" id="sec" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'third')">
+            <input type="text" id="third" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'fourth')">
+            <input type="text" id="fourth" inputmode="numeric" maxlength="1">
+        </div>
+        <button class="emptyInputButton" onclick="emptyInput()">지우기</button>
+        <button onclick="checkPasscodels8()">확인</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 두레교회 청년부. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
+
+
+

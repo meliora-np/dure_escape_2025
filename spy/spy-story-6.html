@@ -1,0 +1,61 @@
+<!-- spy-story-6.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두레교회 청년부 갓스플랜</title>
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body class="spy">
+    <header>
+        <h1>산업스파이</h1>
+        <!-- Add any other header content here -->
+    </header>
+
+    <div style="line-height:150%;">
+        <br>
+    </div>
+    
+    <main>
+        <section>
+
+            <p class="small-title">
+                <b>3. 용의자 조사 003 - 김부장</b><br>
+            </p>
+            
+            <p> 
+                평소 김부장은 <b>내기 골프 모임</b>에 자주 참석합니다.<br>
+                이번 골프 모임에서 판돈이 큰 내기를 하게 되었고 자신의 골프 실력을 믿었던 김부장은 자만했던 나머지 실수해서 내기에서 지게 되었습니다.<br></br>
+
+                L기업 사무실에서 김부장의 자리를 찾아 단서를 한 번 살펴 봐주세요.<br>
+            </p>
+
+        </section>
+        <!-- Add more sections or content here -->
+    </main>
+ 
+    <div class = "spy-passcode-container">
+        <div class = "spy-passcodeInput">
+            <input type="text" inputmode="numeric" style="text-transform: uppercase" id='ist' maxlength="1" onkeyup="clickEvent(this,'sec')">
+            <input type="text" inputmode="numeric" style="text-transform: uppercase" id="sec" maxlength="1" onkeyup="clickEvent(this,'third')">
+            <input type="text" inputmode="numeric" style="text-transform: uppercase" id="third" maxlength="1" onkeyup="clickEvent(this,'fourth')">
+            <input type="text" inputmode="numeric" style="text-transform: uppercase" id="fourth" maxlength="1" onkeyup="clickEvent(this,'fifth')">
+            <input type="text" inputmode="numeric" style="text-transform: uppercase" id="fifth" maxlength="1" onkeyup="clickEvent(this, 'sixth')">
+            <input type="text" inputmode="numeric" style="text-transform: uppercase" id="sixth" maxlength="1">
+        </div>
+        <button class="emptyInputButton" onclick="emptyInput()">지우기</button>
+        <button onclick="checkPasscodeSs6()">확인</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 두레교회 청년부. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
+
+

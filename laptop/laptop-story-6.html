@@ -1,0 +1,63 @@
+<!-- laptop-story-6.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두레교회 청년부 갓스플랜</title>
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body class="laptop">
+    <header>
+        <h1>노트북 도난사건</h1>
+        <!-- Add any other header content here -->
+    </header>
+
+    <div style="line-height:150%;">
+        <br>
+    </div>
+    
+    <main>
+        <section>
+
+            <p class="small-title">
+                <b>3. 용의자 조사 002 - 김학생 (2) </b><br>
+            </p>
+
+            <p> 
+                김학생의 자리는 <b>PETER</b> 자리입니다. <br></br>
+
+                그 자리에는 <b>취업에 필요한 자료들</b>이 많이 보입니다.<br></br>
+
+                김학생의 알리바이를 찾아 비밀번호를 입력하세요.<br></br>
+            </p>
+
+        </section>
+        <!-- Add more sections or content here -->
+    </main>
+ 
+    <div class = "passcode-container">
+        <div class = "passcodeInput">
+            <input type="text" id='ist' inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'sec')">
+            <input type="text" id="sec" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'third')">
+            <input type="text" id="third" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'fourth')">
+            <input type="text" id="fourth" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'fifth')">
+            <input type="text" id="fifth" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this, 'sixth')">
+            <input type="text" id="sixth" inputmode="numeric" maxlength="1">
+        </div>
+        <button class="emptyInputButton" onclick="emptyInput()">지우기</button>
+        <button onclick="checkPasscodels6()">확인</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 두레교회 청년부. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
+
+
+
