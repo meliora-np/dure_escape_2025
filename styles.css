@@ -43,7 +43,7 @@ body {
 
 /* Index Page Styles */
 body.index {
-    font-family: 'HeirofLightFont';
+    font-family: 'SpyFont';
 }
 
 body.index::before {
