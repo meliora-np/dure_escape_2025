@@ -47,7 +47,7 @@ body.index {
 }
 
 body.index::before {
-    filter: brightness(50%);
+    filter: brightness(25%);
     content: "";
     position: fixed;
     top: 0;
@@ -57,7 +57,6 @@ body.index::before {
     background: url('images/DesertBackground.png') no-repeat center center fixed; /* Set the background image */
     background-size: cover; /* Zoom and cover the entire container */
     z-index: -1;
-    filter: brightness(75%);
 }
 
 /* Laptop Page Styles */
