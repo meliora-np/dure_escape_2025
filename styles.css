@@ -49,6 +49,7 @@ body.index {
 body.index::before {
     content: "";
     position: fixed;
+    filter: brightness(75%);
     top: 0;
     left: 0;
     width: 100%;
