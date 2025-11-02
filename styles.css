@@ -111,7 +111,7 @@ body.exam::before {
 
 /* Header Styles */
 header.index {
-    font-family: 'HeirofLightFont';
+    font-family: 'SpyFont';
     z-index: 1;
     color: #fff;
     padding: 1em;
