@@ -65,6 +65,7 @@ body.laptop {
 } 
 
 body.laptop::before {
+    filter: brightness(25%);
     content: "";
     position: fixed;
     top: 0;
@@ -82,6 +83,7 @@ body.spy {
 }
 
 body.spy::before {
+    filter: brightness(25%);
     content: "";
     position: fixed;
     top: 0;
@@ -99,6 +101,7 @@ body.exam {
 }
 
 body.exam::before {
+    filter: brightness(25%);
     content: "";
     position: fixed;
     top: 0;
