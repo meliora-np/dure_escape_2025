@@ -1,12 +1,12 @@
 /* Font Imports */
 @font-face {
     font-family: 'HeirofLightFont';
-    src: local('HeirofLightFont'), url('fonts/HeirofLightRegular.ttf') format('truetype');
+    src: local('HeirofLightFont'), url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'LaptopLogoFont';
-    src: local('LaptopLogoFont'), url('fonts/Cafe24Classictype-v1.1.ttf') format('truetype');
+    src: local('LaptopLogoFont'), url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
 }
 
 @font-face {
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'SpyLogoFont';
-    src: local('SpyLogoFont'), url('fonts/Typo_SsangmunDongStencil.ttf') format('truetype');
+    src: local('SpyLogoFont'), url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
 }
 
 @font-face {
@@ -26,12 +26,12 @@
 
 @font-face {
     font-family: 'ExamLogoFont';
-    src: local('ExamLogoFont'), url('fonts/Cafe24Ohsquare-v2.0.otf') format('opentype');
+    src: local('ExamLogoFont'), url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'ExamFont';
-    src: local('ExamFont'), url('fonts/Cafe24OhsquareAir-v2.0.ttf') format('truetype');
+    src: local('ExamFont'), url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
 }
 
 /* Body Styles */
