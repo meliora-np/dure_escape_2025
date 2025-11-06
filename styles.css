@@ -174,10 +174,10 @@ h1, h2, label {
 }
 
 h3 {
-    color:fuchsia;
+    color: fuchsia;
     text-align: center;
     padding-bottom: 10px;
-    font-size: 12pt
+    font-size: 30px
 }
 
 /* Paragraphy Styles */
