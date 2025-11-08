@@ -22,20 +22,31 @@
             </p>
 
             <p>
-                먼저, 용의자들의 거주지역을 확인해 봅시다.<br></br>
                 
-                <b>마스터마인드 학원</b>에 가면 칠판에 지도가 있을 것입니다.<br></br>
+                들고 왔던 휴대폰으로 여기가 어딘지 살펴볼 수 있지 않을까?<br></br>
 
-                그 지도와 함께 있는 단서를 이용해서 마스터마인드 학원을 기준으로 <br> 
-                <b>3km 반경 내</b>에 거주하는 사람은 <b>O로 표시</b>하고, <br>
-                그 외 지역에 거주하는 사람은 <b>X로 표시</b>해 주세요. <br></br>
+                그러나 휴대폰에는 잠금이 걸려있다.<br></br>
+                
+                떨어지면서 머리를 다쳤는지 비밀번호가 기억이 나질 않는다. <br></br>
                 
                 <span class="small-ref-text"><b>X표시가 되었다고 해서 용의선상에서 제외하시면 안됩니다. <br> 표를 전부 채워주세요.</b></span>
 
             </p>
-
+<!--
             <div class="next-story-button">
                 <button onclick="navigateToNextStory('exam-story-2.html')">다음 이야기</button>
+            </div>
+-->
+            <div class = "exam-passcode-container">
+                <div class = "exam-passcodeInput">
+                    <input type="text" id='ist' inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'sec')">
+                    <input type="text" id="sec" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'third')">
+                    <input type="text" id="third" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'fourth')">
+                    <input type="text" id="fourth" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'fifth')">
+                    <input type="text" id="fifth" inputmode="numeric" maxlength="1">
+                </div>
+                <button class="emptyInputButton" onclick="emptyInput()">지우기</button>
+                <button onclick="checkPasscodeEs6()">확인</button>
             </div>
             
         </section>
