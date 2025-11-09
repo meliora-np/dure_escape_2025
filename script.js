@@ -414,3 +414,34 @@ function checkPasscodeEs1() {
         document.getElementById('fourth').value = '';
     }
 }; 
+
+
+function checkPasscodeEs4() {
+    var ist = document.getElementById('ist').value;
+    var sec = document.getElementById('sec').value;
+    var third = document.getElementById('third').value;
+    var fourth = document.getElementById('fourth').value;
+    var fifth = document.getElementById('fifth').value;
+
+    // Combine the username and password into a single string
+    var combinedStringEs1 = ist + sec + third + fourth + fifth;
+
+    // Logic to check the answer
+    if (combinedStringEs1 === '1522') {
+        // Allow access to the next stage
+        navigateToNextStory('exam-story-2.html');
+    } else {
+        // Display an error message or take other actions
+        alert("비밀번호가 잘못되었습니다.");
+        // Clear the input fields
+        document.getElementById('ist').value = '';
+        document.getElementById('sec').value = '';
+        document.getElementById('third').value = '';
+        document.getElementById('fourth').value = '';
+    }
+}; 
+
+function onlyLetters(input) {
+    // allow only A–Z letters and automatically uppercase
+    input.value = input.value.replace(/[^a-zA-Z]/g, '').toUpperCase();
+};
