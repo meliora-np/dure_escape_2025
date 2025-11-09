@@ -5,9 +5,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+    // === Temporary Access Control for Public Visitors ===
+    const launchDate = new Date('2025-11-22T15:00:00+09:00'); // 공개일: 11월 22일 15시 (KST)
+    const now = new Date();
+
+    const params = new URLSearchParams(window.location.search);
+    const hasPreview = params.has('preview');
+    const hasCookie = document.cookie.includes('preview=1');
+
+    // ?preview=1로 접속하면 12시간 동안 접근 가능 쿠키 발급
+    if (hasPreview) {
+        const expiry = new Date(Date.now() + 12 * 60 * 60 * 1000).toUTCString(); // 12시간
+        document.cookie = `preview=1; path=/; expires=${expiry}`;
+        history.replaceState({}, '', location.pathname); // URL에서 ?preview 제거
+    }
+
+    const isAuthorized = hasPreview || hasCookie;
+
+    // 공개 전에는 일반 방문자는 Coming Soon으로 리다이렉트
+    if (now < launchDate && !isAuthorized) {
+        window.location.href = 'coming-soon.html';
+    }
+    </script>
+
+    
     <title>두레교회 청년부 U TURN TO GOD</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
+
 
 <body class="index">
     

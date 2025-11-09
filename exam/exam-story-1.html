@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="../styles.css">
     
 </head>
+
+<style>
+    .color1 { background-color: #FF0000; } /* red */
+</style>
+
 <body class="exam">
     <header>
         <h1>만나와 메추라기</h1>
@@ -16,10 +21,11 @@
     
     <main>
         <section>
-
+<!--
             <p class="small-title">
                 <b>1. 용의자 조사 - 지역</b><br></br>
             </p>
+-->
 
             <p>
                 
@@ -39,14 +45,13 @@
 -->
             <div class = "exam-passcode-container">
                 <div class = "exam-passcodeInput">
-                    <input type="text" id='ist' inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'sec')">
-                    <input type="text" id="sec" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'third')">
-                    <input type="text" id="third" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'fourth')">
-                    <input type="text" id="fourth" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'fifth')">
-                    <input type="text" id="fifth" inputmode="numeric" maxlength="1">
+                    <input type="text" id='ist' class="color1" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'sec')">
+                    <input type="text" id="sec" class="color1" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'third')">
+                    <input type="text" id="third" class="color1" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'fourth')">
+                    <input type="text" id="fourth" class="color1" inputmode="numeric" maxlength="1">
                 </div>
                 <button class="emptyInputButton" onclick="emptyInput()">지우기</button>
-                <button onclick="checkPasscodeEs6()">확인</button>
+                <button onclick="checkPasscodeEs1()">확인</button>
             </div>
             
         </section>

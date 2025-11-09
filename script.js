@@ -391,20 +391,19 @@ function checkPasscodeSs8() {
     }
 };
 
-function checkPasscodeEs6() {
+function checkPasscodeEs1() {
     var ist = document.getElementById('ist').value;
     var sec = document.getElementById('sec').value;
     var third = document.getElementById('third').value;
     var fourth = document.getElementById('fourth').value;
-    var fifth = document.getElementById('fifth').value;
 
     // Combine the username and password into a single string
-    var combinedStringEs6 = ist + sec + third + fourth + fifth;
+    var combinedStringEs1 = ist + sec + third + fourth;
 
     // Logic to check the answer
-    if (combinedStringEs6 === '55333') {
+    if (combinedStringEs1 === '1522') {
         // Allow access to the next stage
-        navigateToNextStory('exam-story-7.html');
+        navigateToNextStory('exam-story-2.html');
     } else {
         // Display an error message or take other actions
         alert("비밀번호가 잘못되었습니다.");
@@ -413,6 +412,5 @@ function checkPasscodeEs6() {
         document.getElementById('sec').value = '';
         document.getElementById('third').value = '';
         document.getElementById('fourth').value = '';
-        document.getElementById('fifth').value = '';
     }
 }; 
