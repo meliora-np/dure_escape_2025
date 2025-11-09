@@ -427,9 +427,9 @@ function checkPasscodeEs4() {
     var combinedStringEs1 = ist + sec + third + fourth + fifth;
 
     // Logic to check the answer
-    if (combinedStringEs1 === '1522') {
+    if (combinedStringEs1 === 'MARAH') {
         // Allow access to the next stage
-        navigateToNextStory('exam-story-2.html');
+        navigateToNextStory('exam-story-5.html');
     } else {
         // Display an error message or take other actions
         alert("비밀번호가 잘못되었습니다.");
@@ -438,6 +438,7 @@ function checkPasscodeEs4() {
         document.getElementById('sec').value = '';
         document.getElementById('third').value = '';
         document.getElementById('fourth').value = '';
+        doocument.getElementbyId('fifth').value ='';
     }
 }; 
 
