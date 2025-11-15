@@ -469,9 +469,11 @@ body.index .nav-button img {
 }
 
 .userInput > .exam-input {
-    margin-bottom: 20px !important;
+    height: auto !important;
     display: block !important;
+    margin-bottom: 20px !important;
 }
+
 
 
 /* Main Content Styles */
