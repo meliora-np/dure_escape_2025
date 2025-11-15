@@ -519,6 +519,7 @@ footer {
 .img-row {
     display:flex;
     gap:20px;
+    justify-content: center;
 }
 
 .img-row img {
