@@ -439,7 +439,6 @@ body.index .nav-button img {
     border-radius: 10px;
     text-align: center;
     font-size: 1rem; /* Adjust the font size as needed */
-    padding-bottom: 1em;
 }
 
 .spy-input {
@@ -452,7 +451,6 @@ body.index .nav-button img {
     border-radius: 10px;
     text-align: center;
     font-size: 1rem; /* Adjust the font size as needed */
-    padding-bottom: 1em;
 }
 
 .exam-input {
@@ -465,7 +463,6 @@ body.index .nav-button img {
     border-radius: 10px;
     text-align: center;
     font-size: 1rem; /* Adjust the font size as needed */
-    padding-bottom: 1em;
 }
 
 .userInput > .exam-input {
