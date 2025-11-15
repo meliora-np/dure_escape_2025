@@ -415,7 +415,7 @@ body.index .nav-button img {
 .exam-passcodeInput {
     display: flex;
     justify-content: center;
-    
+
 }
 
 .userInput {
@@ -514,4 +514,13 @@ footer {
         max-height: auto;
     }
 
+}
+
+.img-row {
+    display:flex;
+    gap:20px;
+}
+
+.img-row img {
+    width:45%;
 }

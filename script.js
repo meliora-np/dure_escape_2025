@@ -289,7 +289,7 @@ function checkPasscodeSs3() {
 function checkPasscodeEs7() {
     var passcodeEs7 = document.getElementById('passcodeEs7').value;
 
-    if (passcodeEs7 === '김시기') {
+    if (passcodeEs7 === 'SIN(죄)') {
         navigateToNextStory('exam-story-8.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
