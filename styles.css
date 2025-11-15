@@ -405,21 +405,21 @@ body.index .nav-button img {
 .passcodeInput {
     display: flex;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 20px;
 
 }
 
 .spy-passcodeInput {
     display: flex;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 20px;
 
 }
 
 .exam-passcodeInput {
     display: flex;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 20px;
 
 }
 
