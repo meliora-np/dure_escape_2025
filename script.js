@@ -446,3 +446,27 @@ function onlyLetters(input) {
     // allow only A–Z letters and automatically uppercase
     input.value = input.value.replace(/[^a-zA-Z]/g, '').toUpperCase();
 };
+
+function checkPasscodeEs8() {
+    var ist = document.getElementById('ist').value;
+    var sec = document.getElementById('sec').value;
+    var third = document.getElementById('third').value;
+    var fourth = document.getElementById('fourth').value;
+
+    // Combine the username and password into a single string
+    var combinedStringEs8 = ist + sec + third + fourth;
+
+    // Logic to check the answer
+    if (combinedStringEs8 === '0313') {
+        // Allow access to the next stage
+        navigateToNextStory('exam-story-9.html');
+    } else {
+        // Display an error message or take other actions
+        alert("비밀번호가 잘못되었습니다.");
+        // Clear the input fields
+        document.getElementById('ist').value = '';
+        document.getElementById('sec').value = '';
+        document.getElementById('third').value = '';
+        document.getElementById('fourth').value = '';
+    }
+}; 
