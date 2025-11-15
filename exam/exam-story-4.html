@@ -36,7 +36,7 @@
                     <input type="text" id="sec"  maxlength="1" onkeyup="clickEvent(this,'third')" oninput=" onlyLetters(this)">
                     <input type="text" id="third" maxlength="1" onkeyup="clickEvent(this,'fourth')" oninput=" onlyLetters(this)">
                     <input type="text" id="fourth" maxlength="1" onkeyup="clickEvent(this,'fifth')" oninput=" onlyLetters(this)">
-                    <input type="text" id="fifth" maxlength="1">
+                    <input type="text" id="fifth" maxlength="1" oninput="onlyLetters(this)">
                 </div>
 
                 <button class="emptyInputButton" onclick="emptyInput()">지우기</button>
