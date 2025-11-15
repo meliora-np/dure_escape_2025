@@ -405,21 +405,18 @@ body.index .nav-button img {
 .passcodeInput {
     display: flex;
     justify-content: center;
-    border-radius: 20px;
 
 }
 
 .spy-passcodeInput {
     display: flex;
     justify-content: center;
-    border-radius: 20px;
 
 }
 
 .exam-passcodeInput {
     display: flex;
     justify-content: center;
-    border-radius: 20px;
 
 }
 
@@ -442,6 +439,7 @@ body.index .nav-button img {
     border-radius: 10px;
     text-align: center;
     font-size: 1rem; /* Adjust the font size as needed */
+    padding-bottom: 20px;
 }
 
 .spy-input {
@@ -454,6 +452,7 @@ body.index .nav-button img {
     border-radius: 10px;
     text-align: center;
     font-size: 1rem; /* Adjust the font size as needed */
+    padding-bottom: 20px;
 }
 
 .exam-input {
@@ -466,6 +465,7 @@ body.index .nav-button img {
     border-radius: 10px;
     text-align: center;
     font-size: 1rem; /* Adjust the font size as needed */
+    padding-bottom: 20px;
 }
 
 
