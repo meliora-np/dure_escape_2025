@@ -424,10 +424,10 @@ function checkPasscodeEs4() {
     var fifth = document.getElementById('fifth').value;
 
     // Combine the username and password into a single string
-    var combinedStringEs1 = ist + sec + third + fourth + fifth;
+    var combinedStringEs4 = ist + sec + third + fourth + fifth;
 
     // Logic to check the answer
-    if (combinedStringEs1 === 'MARAH') {
+    if (combinedStringEs4 === 'MARAH') {
         // Allow access to the next stage
         navigateToNextStory('exam-story-5.html');
     } else {
@@ -438,7 +438,7 @@ function checkPasscodeEs4() {
         document.getElementById('sec').value = '';
         document.getElementById('third').value = '';
         document.getElementById('fourth').value = '';
-        doocument.getElementbyId('fifth').value ='';
+        document.getElementbyId('fifth').value ='';
     }
 }; 
 
