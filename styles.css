@@ -468,6 +468,11 @@ body.index .nav-button img {
     padding-bottom: 1em;
 }
 
+.userInput > .exam-input {
+    margin-bottom: 20px !important;
+    display: block !important;
+}
+
 
 /* Main Content Styles */
 main {
