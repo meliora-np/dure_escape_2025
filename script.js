@@ -298,9 +298,9 @@ function checkPasscodeEs7() {
 };
 
 function checkPasscodeEs9() {
-    var passcodeEs7 = document.getElementById('passcodeEs9').value;
+    var passcodeEs9 = document.getElementById('passcodeEs9').value;
 
-    if (passcodeEs7 === '한마리양') {
+    if (passcodeEs9 === '한마리양') {
         navigateToNextStory('exam-story-10.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
