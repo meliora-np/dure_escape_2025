@@ -328,8 +328,8 @@ body.index .nav-button img {
 }
 
 .passcode-container button {
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     font-size: medium;
     cursor: pointer
@@ -355,8 +355,8 @@ body.index .nav-button img {
 }
 
 .spy-passcode-container button {
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     font-size: medium;
     cursor: pointer
@@ -383,8 +383,8 @@ body.index .nav-button img {
 }
 
 .exam-passcode-container button {
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     font-size: medium;
     cursor: pointer
