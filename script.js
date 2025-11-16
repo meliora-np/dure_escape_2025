@@ -142,7 +142,7 @@ function checkPasscodeSs4() {
 
     // Allow ±100 range
     if (Math.abs(userNumber - correctAnswer) <= 100) {
-        navigateToNextStory('spy-story-3.html');
+        navigateToNextStory('spy-story-5.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
         document.getElementById('ist').value = '';
