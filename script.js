@@ -58,58 +58,13 @@ function startExamStory() {
 }
 
 
-function checkLoginls1() {
-    var usernamels1 = document.getElementById('username').value.toLowerCase();
-    var passwordls1 = document.getElementById('password').value;
-  
-    // Combine the username and password into a single string
-    var combinedStringls1 = usernamels1 + passwordls1;
-  
-    // Logic to check the answer
-    if (combinedStringls1 === 'listencafe20201221') {
-        // Allow access to the next stage
-        navigateToNextStory('laptop-story-2.html');
-    } else {
-        // Display an error message or take other actions
-        alert("아이디나 비밀번호가 잘못되었습니다.");
-        // Clear the input fields
-        document.getElementById('username').value = '';
-        document.getElementById('password').value = '';
-    }
-};
+
 
 function clickEvent(first,last){
     if(first.value.length){
         document.getElementById(last).focus();
     }
 }
-
-function checkPasscodels5() {
-    var ist = document.getElementById('ist').value;
-    var sec = document.getElementById('sec').value;
-    var third = document.getElementById('third').value;
-    var fourth = document.getElementById('fourth').value;
-    var fifth = document.getElementById('fifth').value;
-  
-    // Combine the username and password into a single string
-    var combinedStringls5 = ist + sec + third + fourth + fifth;
-    var combinedStringls5Upper = combinedStringls5.toUpperCase();
-  
-    // Logic to check the answer
-    if (combinedStringls5Upper === 'PETER') {
-        // Allow access to the next stage
-        navigateToNextStory('laptop-story-6.html');
-    } else {
-        // Display an error message or take other actions
-        alert("비밀번호가 잘못되었습니다.");
-        // Clear the input fields
-        document.getElementById('ist').value = '';
-        document.getElementById('sec').value = '';
-        document.getElementById('third').value = '';
-        document.getElementById('fourth').value = '';
-        document.getElementById('fifth').value = '';
-    }
-};
 
 function emptyInput() {
     document.getElementById('ist').value = '';
@@ -119,70 +74,8 @@ function emptyInput() {
     document.getElementById('fifth').value = '';
     document.getElementById('sixth').value = '';
     document.getElementById('ist').focus()
-}
-
-function checkPasscodels6() {
-    var ist = document.getElementById('ist').value;
-    var sec = document.getElementById('sec').value;
-    var third = document.getElementById('third').value;
-    var fourth = document.getElementById('fourth').value;
-    var fifth = document.getElementById('fifth').value;
-    var sixth = document.getElementById('sixth').value;
-  
-    // Combine the username and password into a single string
-    var combinedStringls6 = ist + sec + third + fourth + fifth + sixth;
-  
-    // Logic to check the answer
-    if (combinedStringls6 === '624985') {
-        // Allow access to the next stage
-        navigateToNextStory('laptop-story-7.html');
-    } else {
-        // Display an error message or take other actions
-        alert("비밀번호가 잘못되었습니다.");
-        // Clear the input fields
-        document.getElementById('ist').value = '';
-        document.getElementById('sec').value = '';
-        document.getElementById('third').value = '';
-        document.getElementById('fourth').value = '';
-        document.getElementById('fifth').value = '';
-        document.getElementById('sixth').value = '';
-    }
 };
 
-function checkPasscodels8() {
-    var ist = document.getElementById('ist').value;
-    var sec = document.getElementById('sec').value;
-    var third = document.getElementById('third').value;
-    var fourth = document.getElementById('fourth').value;
-
-    // Combine the username and password into a single string
-    var combinedStringls8 = ist + sec + third + fourth;
-
-    // Logic to check the answer
-    if (combinedStringls8 === '5938') {
-        // Allow access to the next stage
-        navigateToNextStory('laptop-story-9.html');
-    } else {
-        // Display an error message or take other actions
-        alert("비밀번호가 잘못되었습니다.");
-        // Clear the input fields
-        document.getElementById('ist').value = '';
-        document.getElementById('sec').value = '';
-        document.getElementById('third').value = '';
-        document.getElementById('fourth').value = '';
-    }
-};
-
-function checkPasscodels9() {
-    var passcodels9 = document.getElementById('last-hint').value;
-
-    if (passcodels9 === '범인은 나사장이야' || passcodels9 === '범인은나사장이야' || passcodels9 === '범인은 나사장이야 ') {
-        navigateToNextStory('laptop-story-10.html');
-    } else {
-        alert("비밀번호가 잘못되었습니다.");
-        document.getElementById('last-hint').value =''
-    }
-}
 
 function checkPasscodeSs1() {
     var ist = document.getElementById('ist').value;
@@ -233,17 +126,6 @@ function checkPasscodeSs2() {
 };
 
 
-function checkPasscodeSs3() {
-    var passcodeSs3 = document.getElementById('passcodeSs3').value;
-
-    if (passcodeSs3 === '야망회') {
-        navigateToNextStory('spy-story-4.html');
-    } else {
-        alert("비밀번호가 잘못되었습니다.");
-        document.getElementById('passcodeSs3').value =''
-    }
-};
-
 function checkPasscodeEs7() {
     var passcodeEs7 = document.getElementById('passcodeEs7').value;
 
@@ -281,7 +163,7 @@ function checkPasscodeLs3() {
 
 function checkPasscodeLs7() {
     var passcodeLs7 = document.getElementById('passcodeLs7').value;
-    var passcodeLs7Upper = passcodeLs7.toUpperCase;
+    var passcodeLs7Upper = passcodeLs7.toUpperCase();
 
     if (passcodeLs7Upper === 'NISSI') {
         navigateToNextStory('laptop-story-8.html');
@@ -319,7 +201,7 @@ function checkPasscodeLs5() {
     // Combine the username and password into a single string
     var combinedStringLs5 = ist + sec;
     // Logic to check the answer
-    if (combinedStringLs5 === '25') {
+    if (combinedStringLs5 === '52') {
         // Allow access to the next stage
         navigateToNextStory('laptop-story-6.html');
     } else {
