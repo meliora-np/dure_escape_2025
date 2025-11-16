@@ -341,6 +341,25 @@ function checkPasscodeLs1() {
     }
 };
 
+function checkPasscodeLs5() {
+    var ist = document.getElementById('ist').value;
+    var sec = document.getElementById('sec').value;
+
+    // Combine the username and password into a single string
+    var combinedStringLs5 = ist + sec;
+    // Logic to check the answer
+    if (combinedStringLs5 === '25') {
+        // Allow access to the next stage
+        navigateToNextStory('laptop-story-6.html');
+    } else {
+        // Display an error message or take other actions
+        alert("비밀번호가 잘못되었습니다.");
+        // Clear the input fields
+        document.getElementById('ist').value = '';
+        document.getElementById('sec').value = '';
+    }
+};
+
 function checkPasscodeSs4() {
     var ist = document.getElementById('ist').value;
     var sec = document.getElementById('sec').value;

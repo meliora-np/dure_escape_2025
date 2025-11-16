@@ -22,37 +22,31 @@
     <main>
         <section>
 
-            <p class="small-title">
-                <b>3. 용의자 조사 002 - 김학생 (1) </b><br>
-            </p>
-
             <p> 
-                두 번째 용의자는 <b>김학생</b>입니다. <br></br>
+                이게 무슨 일인지.. <br>
+                내가 손을 들고 기도하면 이스라엘이 이기고,<br>
+                손을 내리면 아말렉이 이기는 상황이다.<br>
+                근데… 큰일이다. 점점 팔이 피곤해지고 있다. <br>
+                나는 빠르게 아론과 홀을 불렀다.<br>
 
-                김학생은 제가 조사한 바로 피해자인 주인공 씨에게 굉장한 피해의식을 가진 것으로 보입니다.<br>
-                주인공의 주변인들에게 주인공 씨의 험담을 했다는 증언이 있습니다.<br></br>
 
-                <b>너 내 도도독 독서실</b>에서 김학생의 캐비넷을 보면 김학생의 독서실 자리를 알 수 있을만한 단서가 있을 것입니다.<br></br>
-
-                <b>김학생의 자리 이름</b>을 찾아 입력하세요. 
-
+                “내가 지금 팔이 피곤하여 아론이 이쪽에서 홀은 저쪽에서 내 팔을 붙들어달라.”</br>
             </p>
+
+            <div class = "exam-passcode-container">
+                <div class = "exam-passcodeInput">
+                    <input type="text" id='ist' inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'sec')">
+                    <input type="text" id="sec" inputmode="numeric" maxlength="1">
+                </div>
+                <button class="emptyInputButton" onclick="emptyInput()">지우기</button>
+                <button onclick="checkPasscodeLs5()">확인</button>
+            </div>
 
         </section>
         <!-- Add more sections or content here -->
     </main>
  
-    <div class = "passcode-container">
-        <div class = "passcodeInput">
-            <input type="text" style="text-transform: uppercase" id='ist' maxlength="1" onkeyup="clickEvent(this,'sec')">
-            <input type="text" style="text-transform: uppercase" id="sec" maxlength="1" onkeyup="clickEvent(this,'third')">
-            <input type="text" style="text-transform: uppercase" id="third" maxlength="1" onkeyup="clickEvent(this,'fourth')">
-            <input type="text" style="text-transform: uppercase" id="fourth" maxlength="1" onkeyup="clickEvent(this,'fifth')">
-            <input type="text" style="text-transform: uppercase" id="fifth" maxlength="1">
-        </div>
-        <button class="emptyInputButton" onclick="emptyInput()">지우기</button>
-        <button onclick="checkPasscodels5()">확인</button>
-    </div>
+
 
     <footer>
         <p>&copy; 2023 두레교회 청년부. All rights reserved.</p>
