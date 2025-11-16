@@ -559,3 +559,51 @@ footer {
     font-size: 24px;
     text-align: center;
 }
+
+
+.story-wrapper {
+    position: relative;
+    display: inline-block; /* 이미지 크기 유지 */
+}
+
+.clear-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    color: white;
+    font-family: 'SpyFont';
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+
+    background: rgba(0, 0, 0, 0.55);
+    padding: 20px 40px;
+    border-radius: 20px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.story-wrapper.cleared .clear-badge {
+    opacity: 1;
+}
+
+
+.cleared {
+    filter: brightness(30%);
+    position: relative;
+}
+
+.cleared::after {
+    content: "CLEAR";
+    color: #00ff99;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

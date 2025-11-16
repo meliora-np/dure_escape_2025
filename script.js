@@ -174,6 +174,7 @@ function checkPasscodeEs9() {
     var passcodeEs9 = document.getElementById('passcodeEs9').value;
 
     if (passcodeEs9 === '한마리양') {
+        localStorage.setItem('examCleared', '1');
         navigateToNextStory('exam-story-10.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
@@ -330,3 +331,54 @@ function checkPasscodeEs8() {
 function playMorse() {
     document.getElementById("morseSound").play();
 }
+
+
+function checkPasscodeSs8() {
+    var raw = document.getElementById('passcodeSs8').value;
+
+    // 1) 모든 공백 제거
+    var cleaned = raw.replace(/\s+/g, '');
+
+    // 2) 한글 약어 통일
+    cleaned = cleaned.replace("히브리서", "히브리서")
+                     .replace("히브", "히브리서")
+                     .replace(/^히/, "히브리서");
+
+    // 3) "장", "절" 등 기호 통일
+    cleaned = cleaned.replace(/장/g, "장")
+                     .replace(/절/g, "절")
+                     .replace(/:/g, "장")
+                     .replace(/ㅡ/g, "")
+                     .replace(/-/g, "")
+                     .replace(/\./g, "");
+
+    // 4) 모든 숫자 패턴을 "장" 기준으로 맞추기
+    // "히브리서9장22절", "히브리서9 22", "히 9:22" 다 통일
+    cleaned = cleaned.replace(/^히브리서(\d{1,2})장?(\d{1,3})절?$/, "히브리서$1장$2절");
+
+    // 정답
+    var answer = "히브리서9장22절";
+
+    if (cleaned === answer) {
+        navigateToNextStory('spy-story-9.html');
+    } else {
+        alert("비밀번호가 잘못되었습니다.");
+        document.getElementById('passcodeSs8').value = '';
+    }
+}
+
+
+// 예: exam 스토리 클리어
+localStorage.setItem('examCleared', 'yes');
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem('examCleared') === 'yes') {
+        document.querySelector("[data-story='exam']").classList.add("cleared");
+    }
+    if (localStorage.getItem('laptopCleared') === 'yes') {
+        document.querySelector("[data-story='laptop']").classList.add("cleared");
+    }
+    if (localStorage.getItem('spyCleared') === 'yes') {
+        document.querySelector("[data-story='spy']").classList.add("cleared");
+    }
+});

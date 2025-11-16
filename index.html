@@ -33,6 +33,45 @@
     
     <title>두레교회 청년부 U TURN TO GOD</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* CLEAR 표시 오버레이 (이미지 위 반투명 레이어) */
+        .story-button {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .story-cleared-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.6);
+            color: #00ff99;
+            padding: 10px 25px;
+            border-radius: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            display: none;
+        }
+
+        /* 엔딩 버튼 */
+        #ending-section {
+            display: none;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #ending-section button {
+            background-color: #0099ff;
+            padding: 1em 2em;
+            font-size: 20px;
+            border-radius: 20px;
+            color: white;
+        }
+    </style>
+
 </head>
 
 
@@ -51,27 +90,78 @@
             <button onclick="navigateToStory('exam/exam.html')">
                 <img src="images/MannaAndQuailLogo.JPG" alt="Exam Story Logo">
             </button>
+            <span class="clear-badge">CLEARED</span>
+
         </section>
 
         <section class="story-button">
             <button onclick="navigateToStory('laptop/laptop.html')">
                 <img src="images/RephidimLogo.jpg" alt="Laptop Story Logo">
             </button>
+            <span class="clear-badge">CLEARED</span>
         </section>
 
         <section class="story-button">
             <button onclick="navigateToStory('spy/spy.html')">
                 <img src="images/GoldenCalfLogo.JPG" alt="Spy Story Logo">
             </button>
-            
+            <span class="clear-badge">CLEARED</span>
+        </section>
+
+        <!-- ⭐ 3개 클리어 시 엔딩 버튼 -->
+        <section id="ending-section">
+            <h2 style="color:white;">🎉 세 개의 스토리를 모두 클리어하셨습니다! 🎉</h2>
+            <button onclick="window.location.href='closing.html'">클로징 영상 보러 가기</button>
         </section>
 
     </main>
 
+    
+
+
     <script src="script.js"></script>
     
 
+    <script>
+    /*  ===== CLEAR 표시 & 엔딩 버튼 표시 ===== */
+
+    const examCleared = localStorage.getItem('examCleared');
+    const laptopCleared = localStorage.getItem('laptopCleared');
+    const spyCleared = localStorage.getItem('spyCleared');
+
+    if (examCleared === '1') {
+        document.getElementById('exam-clear').style.display = 'block';
+    }
+
+    if (laptopCleared === '1') {
+        document.getElementById('laptop-clear').style.display = 'block';
+    }
+
+    if (spyCleared === '1') {
+        document.getElementById('spy-clear').style.display = 'block';
+    }
+
+    if (examCleared === '1' && laptopCleared === '1' && spyCleared === '1') {
+        document.getElementById('ending-section').style.display = 'block';
+    }
+    </script>
+
 </body>
+
+<div style="text-align:center; margin-top:20px; margin-bottom:40px;">
+    <button onclick="resetProgress()" style="
+        background-color:#333;
+        color:white;
+        padding:12px 20px;
+        border:none;
+        border-radius:1cm;
+        font-size:14px;
+        cursor:pointer;
+    ">
+        전체 진행상황 초기화
+    </button>
+</div>
+
 <footer>
     <p>&copy; 2025 두레교회 청년부. All rights reserved.</p>
 </footer>
