@@ -131,16 +131,14 @@ function checkPasscodeSs4() {
     var third = document.getElementById('third').value;
     var fourth = document.getElementById('fourth').value;
 
-    // Combine inputs
+    // 입력 4개를 하나의 숫자로 합침
     var combinedStringSs4 = ist + sec + third + fourth;
-
-    // Convert to number
     var userNumber = Number(combinedStringSs4);
 
-    // Correct answer
+    // 정답
     var correctAnswer = 7871;
 
-    // Allow ±100 range
+    // ±100 허용
     if (Math.abs(userNumber - correctAnswer) <= 100) {
         navigateToNextStory('spy-story-5.html');
     } else {
@@ -151,6 +149,7 @@ function checkPasscodeSs4() {
         document.getElementById('fourth').value = '';
     }
 };
+
 
 function checkPasscodeEs7() {
     var passcodeEs7 = document.getElementById('passcodeEs7').value;
