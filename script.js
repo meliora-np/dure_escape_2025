@@ -308,6 +308,17 @@ function checkPasscodeEs9() {
     }
 };
 
+function checkPasscodeLs1() {
+    var passcodeEs9 = document.getElementById('passcodeLs1').value;
+
+    if (passcodeEs9 === '출79') {
+        navigateToNextStory('laptop-story-2.html');
+    } else {
+        alert("비밀번호가 잘못되었습니다.");
+        document.getElementById('passcodeLs1').value =''
+    }
+};
+
 function checkPasscodeSs4() {
     var ist = document.getElementById('ist').value;
     var sec = document.getElementById('sec').value;
