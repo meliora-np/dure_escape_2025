@@ -78,73 +78,6 @@ function checkLoginls1() {
     }
 };
 
-
-
-let passcodels3 = document.querySelectorAll("passcodeInput");
-
-console.log(passcodels3);
-
-passcodels3.forEach((input, index1) => {
-    input.addEventListener("keyup", (e) => {
-        const currentInputls3 = input, 
-            nextInputls3 = input.nextElementSibling, 
-            prevInputls3 = input.previousElementSibling;
-
-            if(currentInputls3.value.length > 1){
-                currentInputls3.value = "";
-                return;
-            }
-
-            if(e.key === "Backspace"){
-                passcodels3.forEach((input, index2) => {
-                    if(index1 <= index2 && prevInputls3){
-                        input.setAttribute("disabled", true);
-                        currentInputls3.value   = "";
-                        prevInputls3.focus();
-                        prevInputls3.value = "";
-                    }
-                })
-            }
-    });
-});
-
-/* window.addEventListener("load", () => passcodels3[0].focus());
-
-button.addEventListener("click", () => {
-    let verifyls3 = ""; 
-    passcodels3.forEach((input) => {
-        verifyls3 += input.value;
-    });
-    console.log(verify);
-}); */
-
-function checkPasscodels3() {
-    var ist = document.getElementById('ist').value;
-    var sec = document.getElementById('sec').value;
-    var third = document.getElementById('third').value;
-    var fourth = document.getElementById('fourth').value;
-    var fifth = document.getElementById('fifth').value;
-  
-    // Combine the username and password into a single string
-    var combinedStringls3 = ist + sec + third + fourth + fifth;
-    var combinedStringls3Upper = combinedStringls3.toUpperCase();
-  
-    // Logic to check the answer
-    if (combinedStringls3Upper === 'JACOB') {
-        // Allow access to the next stage
-        navigateToNextStory('laptop-story-4.html');
-    } else {
-        // Display an error message or take other actions
-        alert("비밀번호가 잘못되었습니다.");
-        // Clear the input fields
-        document.getElementById('ist').value = '';
-        document.getElementById('sec').value = '';
-        document.getElementById('third').value = '';
-        document.getElementById('fourth').value = '';
-        document.getElementById('fifth').value = '';
-    }
-};
-
 function clickEvent(first,last){
     if(first.value.length){
         document.getElementById(last).focus();
@@ -329,7 +262,7 @@ function checkPasscodeLs7() {
         navigateToNextStory('laptop-story-8.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
-        document.getElementById('passcodeLs7').value =''
+        document.getElementById('passcodeLs7').value ='';
     }
 };
 

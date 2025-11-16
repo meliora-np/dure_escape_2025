@@ -534,3 +534,28 @@ footer {
 .img-row img {
     width:45%;
 }
+
+
+.special-input-container {
+    display: flex;
+    flex-direction: column; /* 위아래 세로 배치 */
+    gap: 10px;
+    width: 80px; /* 입력칸 크기 조절 */
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+.white-input {
+    background-color: white;
+    border: 2px solid #000;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.blue-input {
+    background-color: #4ea3ff; /* 밝은 파랑 */
+    border: 2px solid #000;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+}

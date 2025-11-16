@@ -9,6 +9,18 @@
 
 </head>
 
+<style>
+    /* 기존 color1, color2, color3 등 그대로 두고 */
+    color1
+    /* 🔥 laptop-story-5 전용 input 세로 배치 */
+    .vertical-inputs .exam-passcodeInput {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+</style>
+
 <body class="laptop">
     <header>
         <h1>노트북 도난사건</h1>
@@ -33,14 +45,15 @@
                 “내가 지금 팔이 피곤하여 아론이 이쪽에서 홀은 저쪽에서 내 팔을 붙들어달라.”</br>
             </p>
 
-            <div class = "exam-passcode-container">
-                <div class = "exam-passcodeInput">
-                    <input type="text" id='ist' inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'sec')">
-                    <input type="text" id="sec" inputmode="numeric" maxlength="1">
-                </div>
-                <button class="emptyInputButton" onclick="emptyInput()">지우기</button>
-                <button onclick="checkPasscodeLs5()">확인</button>
+            <div class="special-input-container">
+                <input type="text" id="ist" class="white-input" maxlength="1">
+                <input type="text" id="sec" class="blue-input" maxlength="1">
             </div>
+
+            <button class="emptyInputButton" onclick="emptyInput()">지우기</button>
+            <button onclick="checkPasscodeLs5()">확인</button>
+
+
 
         </section>
         <!-- Add more sections or content here -->
