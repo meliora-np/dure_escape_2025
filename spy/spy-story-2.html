@@ -26,6 +26,17 @@
                 가는 길을 따라 <b>선을 그어보자.</b> 
             </p>
 
+            <div class = "spy-passcode-container">
+                <div class = "spy-passcodeInput">
+                    <input type="text" id='ist' inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'sec')">
+                    <input type="text" id="sec" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'third')">
+                    <input type="text" id="third" inputmode="numeric" maxlength="1" onkeyup="clickEvent(this,'fourth')">
+                    <input type="text" id="fourth" inputmode="numeric" maxlength="1">
+                </div>
+                <button class="emptyInputButton" onclick="emptyInput()">지우기</button>
+                <button onclick="checkPasscodeSs2()">확인</button>
+            </div>
+
         </section>
         <!-- Add more sections or content here -->
     </main>

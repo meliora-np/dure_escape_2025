@@ -208,6 +208,31 @@ function checkPasscodeSs1() {
     }
 };
 
+function checkPasscodeSs2() {
+    var ist = document.getElementById('ist').value;
+    var sec = document.getElementById('sec').value;
+    var third = document.getElementById('third').value;
+    var fourth = document.getElementById('fourth').value;
+
+    // Combine the username and password into a single string
+    var combinedStringSs2 = ist + sec + third + fourth;
+
+    // Logic to check the answer
+    if (combinedStringSs2 === '1122') {
+        // Allow access to the next stage
+        navigateToNextStory('spy-story-3.html');
+    } else {
+        // Display an error message or take other actions
+        alert("비밀번호가 잘못되었습니다.");
+        // Clear the input fields
+        document.getElementById('ist').value = '';
+        document.getElementById('sec').value = '';
+        document.getElementById('third').value = '';
+        document.getElementById('fourth').value = '';
+    }
+};
+
+
 function checkPasscodeSs3() {
     var passcodeSs3 = document.getElementById('passcodeSs3').value;
 
