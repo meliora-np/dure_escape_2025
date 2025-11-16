@@ -320,6 +320,18 @@ function checkPasscodeLs3() {
     }
 };
 
+function checkPasscodeLs7() {
+    var passcodeLs7 = document.getElementById('passcodeLs7').value;
+    var passcodeLs7Upper = passcodeLs7.toUpperCase;
+
+    if (passcodeLs7Upper === 'NISSI') {
+        navigateToNextStory('laptop-story-8.html');
+    } else {
+        alert("비밀번호가 잘못되었습니다.");
+        document.getElementById('passcodeLs7').value =''
+    }
+};
+
 function checkPasscodeLs1() {
     var ist = document.getElementById('ist').value;
     var sec = document.getElementById('sec').value;
