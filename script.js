@@ -308,6 +308,17 @@ function checkPasscodeEs9() {
     }
 };
 
+function checkPasscodeLs3() {
+    var passcodeLs3 = document.getElementById('passcodeLs3').value;
+
+    if (passcodeLs3 === 'JOSHUA') {
+        navigateToNextStory('laptop-story-4.html');
+    } else {
+        alert("비밀번호가 잘못되었습니다.");
+        document.getElementById('passcodeLs9').value =''
+    }
+};
+
 function checkPasscodeLs1() {
     var ist = document.getElementById('ist').value;
     var sec = document.getElementById('sec').value;
