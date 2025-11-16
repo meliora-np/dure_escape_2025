@@ -309,13 +309,23 @@ function checkPasscodeEs9() {
 };
 
 function checkPasscodeLs1() {
-    var passcodeLs1 = document.getElementById('passcodeLs1').value;
+    var ist = document.getElementById('ist').value;
+    var sec = document.getElementById('sec').value;
+    var third = document.getElementById('third').value;
 
-    if (passcodeLs1 === '출79') {
+    // Combine the username and password into a single string
+    var combinedStringLs1 = ist + sec + third;
+    // Logic to check the answer
+    if (combinedStringLs1 === '출79') {
+        // Allow access to the next stage
         navigateToNextStory('laptop-story-2.html');
     } else {
+        // Display an error message or take other actions
         alert("비밀번호가 잘못되었습니다.");
-        document.getElementById('passcodeLs1').value =''
+        // Clear the input fields
+        document.getElementById('ist').value = '';
+        document.getElementById('sec').value = '';
+        document.getElementById('third').value = '';
     }
 };
 
