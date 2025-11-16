@@ -125,6 +125,32 @@ function checkPasscodeSs2() {
     }
 };
 
+function checkPasscodeSs4() {
+    var ist = document.getElementById('ist').value;
+    var sec = document.getElementById('sec').value;
+    var third = document.getElementById('third').value;
+    var fourth = document.getElementById('fourth').value;
+
+    // Combine inputs
+    var combinedStringSs4 = ist + sec + third + fourth;
+
+    // Convert to number
+    var userNumber = Number(combinedStringSs4);
+
+    // Correct answer
+    var correctAnswer = 7871;
+
+    // Allow ±100 range
+    if (Math.abs(userNumber - correctAnswer) <= 100) {
+        navigateToNextStory('spy-story-3.html');
+    } else {
+        alert("비밀번호가 잘못되었습니다.");
+        document.getElementById('ist').value = '';
+        document.getElementById('sec').value = '';
+        document.getElementById('third').value = '';
+        document.getElementById('fourth').value = '';
+    }
+};
 
 function checkPasscodeEs7() {
     var passcodeEs7 = document.getElementById('passcodeEs7').value;
