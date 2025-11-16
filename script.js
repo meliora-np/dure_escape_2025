@@ -310,12 +310,13 @@ function checkPasscodeEs9() {
 
 function checkPasscodeLs3() {
     var passcodeLs3 = document.getElementById('passcodeLs3').value;
+    var passcodeLs3Upper = passcodeLs3.toUpperCase;
 
-    if (passcodeLs3 === 'JOSHUA') {
+    if (passcodeLs3Upper === 'JOSHUA') {
         navigateToNextStory('laptop-story-4.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
-        document.getElementById('passcodeLs9').value =''
+        document.getElementById('passcodeLs3').value =''
     }
 };
 
