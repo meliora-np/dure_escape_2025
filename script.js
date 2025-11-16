@@ -200,6 +200,7 @@ function checkPasscodeLs7() {
     var passcodeLs7Upper = passcodeLs7.toUpperCase();
 
     if (passcodeLs7Upper === 'NISSI') {
+        localStorage.setItem('laptopCleared', '1');
         navigateToNextStory('laptop-story-8.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
