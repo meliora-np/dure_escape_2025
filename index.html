@@ -42,19 +42,19 @@
             justify-content: center;
         }
 
-        .story-cleared-overlay {
+        .clear-badge {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 10px;
+            right: 10px;
             background: rgba(0,0,0,0.6);
             color: #00ff99;
-            padding: 10px 25px;
-            border-radius: 10px;
-            font-size: 28px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 20px;
             font-weight: bold;
             display: none;
         }
+
 
         /* 엔딩 버튼 */
         #ending-section {
@@ -87,25 +87,24 @@
     <main>
         
         <section class="story-button">
-            <button onclick="navigateToStory('exam/exam.html')">
+            <button onclick="navigateToStory('exam/exam.html')" class="story-item">
                 <img src="images/MannaAndQuailLogo.JPG" alt="Exam Story Logo">
+                <span class="clear-badge" id="exam-clear">CLEARED</span>
             </button>
-            <span class="clear-badge">CLEARED</span>
-
         </section>
 
         <section class="story-button">
-            <button onclick="navigateToStory('laptop/laptop.html')">
+            <button onclick="navigateToStory('laptop/laptop.html')" class="story-item">
                 <img src="images/RephidimLogo.jpg" alt="Laptop Story Logo">
+                <span class="clear-badge" id="laptop-clear">CLEARED</span>
             </button>
-            <span class="clear-badge">CLEARED</span>
         </section>
 
         <section class="story-button">
-            <button onclick="navigateToStory('spy/spy.html')">
+            <button onclick="navigateToStory('spy/spy.html')" class="story-item">
                 <img src="images/GoldenCalfLogo.JPG" alt="Spy Story Logo">
+                <span class="clear-badge" id="spy-clear">CLEARED</span>
             </button>
-            <span class="clear-badge">CLEARED</span>
         </section>
 
         <!-- ⭐ 3개 클리어 시 엔딩 버튼 -->

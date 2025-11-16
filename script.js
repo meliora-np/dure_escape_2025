@@ -382,3 +382,14 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("[data-story='spy']").classList.add("cleared");
     }
 });
+
+function resetProgress() {
+    if (!confirm("전체 진행상황을 초기화하시겠습니까?")) return;
+
+    localStorage.removeItem('examCleared');
+    localStorage.removeItem('laptopCleared');
+    localStorage.removeItem('spyCleared');
+
+    alert("초기화가 완료되었습니다!");
+    location.reload();
+}
