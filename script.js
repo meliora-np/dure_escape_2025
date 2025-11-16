@@ -384,12 +384,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function resetProgress() {
-    if (!confirm("전체 진행상황을 초기화하시겠습니까?")) return;
+    if (!confirm("정말 전체 진행상황을 초기화하시겠습니까?")) {
+        return; // 사용자가 취소 선택
+    }
 
     localStorage.removeItem('examCleared');
     localStorage.removeItem('laptopCleared');
     localStorage.removeItem('spyCleared');
 
-    alert("초기화가 완료되었습니다!");
-    location.reload();
+    alert("전체 진행상황이 초기화되었습니다!");
+
+    location.reload(); // 페이지 자동 새로고침
 }
