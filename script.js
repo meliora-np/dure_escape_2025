@@ -309,9 +309,9 @@ function checkPasscodeEs9() {
 };
 
 function checkPasscodeLs1() {
-    var passcodeEs9 = document.getElementById('passcodeLs1').value;
+    var passcodeLs1 = document.getElementById('passcodeLs1').value;
 
-    if (passcodeEs9 === '출79') {
+    if (passcodeLs1 === '출79') {
         navigateToNextStory('laptop-story-2.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
