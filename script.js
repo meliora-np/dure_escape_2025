@@ -533,3 +533,7 @@ function checkPasscodeEs8() {
         document.getElementById('fourth').value = '';
     }
 }; 
+
+function playMorse() {
+    document.getElementById("morseSound").play();
+}
