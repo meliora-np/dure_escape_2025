@@ -1,609 +1,233 @@
-/* Font Imports */
+/* =======================================
+   FONT IMPORTS
+======================================= */
+
 @font-face {
     font-family: 'HeirofLightFont';
-    src: local('HeirofLightFont'), url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
+    src: url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
 }
-
 @font-face {
     font-family: 'LaptopLogoFont';
-    src: local('LaptopLogoFont'), url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
+    src: url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
 }
-
 @font-face {
     font-family: 'LaptopFont';
-    src: local('LaptopFont'), url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
+    src: url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
 }
-
 @font-face {
     font-family: 'SpyLogoFont';
-    src: local('SpyLogoFont'), url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
+    src: url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
 }
-
 @font-face {
     font-family: 'SpyFont';
-    src: local('SpyFont'), url('fonts/NeoDunggeunmoPro-Regular.ttf') format('truetype');
+    src: url('fonts/NeoDunggeunmoPro-Regular.ttf') format('truetype');
 }
-
 @font-face {
     font-family: 'ExamLogoFont';
-    src: local('ExamLogoFont'), url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
+    src: url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
 }
-
 @font-face {
     font-family: 'ExamFont';
-    src: local('ExamFont'), url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
+    src: url('fonts/Cafe24Simplehae-v2.0.ttf') format('truetype');
 }
 
-/* Body Styles */
+/* =======================================
+   BASE
+======================================= */
+
 body {
     margin: 0;
     padding: 0;
-    word-break: keep-all
+    word-break: keep-all;
 }
 
-/* Index Page Styles */
-body.index {
-    font-family: 'SpyFont';
-}
+/* =======================================
+   PAGE FONTS + BACKGROUNDS
+======================================= */
 
-body.index::before {
-    filter: brightness(25%);
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('images/DesertBackground.png') no-repeat center center fixed; /* Set the background image */
-    background-size: cover; /* Zoom and cover the entire container */
-    z-index: -1;
-}
-
-/* Laptop Page Styles */
-body.laptop {
-    font-family: 'LaptopLogoFont', 'LaptopFont';
-} 
-
-body.laptop::before {
-    filter: brightness(25%);
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('images/DesertBackground.png') no-repeat center center fixed; /* Set the background image */
-    background-size: cover; /* Zoom and cover the entire container */
-    z-index: -1;
-}
-
-/* Spy Page Styles */
-body.spy {
-    font-family: 'SpyLogoFont', 'SpyFont';
-}
-
-body.spy::before {
-    filter: brightness(25%);
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('images/DesertBackground.png') no-repeat center center fixed; /* Set the background image */
-    background-size: cover; /* Zoom and cover the entire container */
-    z-index: -1;
-}
-
-/* Exam Page Styles */
+body.index,
+body.spy,
+body.laptop,
 body.exam {
-    font-family: 'ExamLogoFont', 'ExamFont';
+    color: white;
 }
 
+body.index { font-family: 'SpyFont'; }
+body.spy { font-family: 'SpyFont'; }
+body.laptop { font-family: 'LaptopFont'; }
+body.exam { font-family: 'ExamFont'; }
+
+body.index::before,
+body.spy::before,
+body.laptop::before,
 body.exam::before {
-    filter: brightness(25%);
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('images/DesertBackground.png') no-repeat center center fixed; /* Set the background image */
-    background-size: cover; /* Zoom and cover the entire container */
+    background: url('images/DesertBackground.png') center/cover no-repeat fixed;
+    filter: brightness(25%);
     z-index: -1;
 }
 
-/* Header Styles */
-header.index {
-    font-family: 'SpyFont';
-    z-index: 1;
-    color: #fff;
+/* =======================================
+   HEADER
+======================================= */
+
+header {
+    text-align: center;
     padding: 1em;
 }
 
-header.laptop {
-    font-family: 'LaptopLogoFont';
-    z-index: 1;
-    color: #fff;
-    padding: 1em;
-}
-
-header.spy {
-    font-family: 'SpyLogoFont';
-    z-index: 1;
-    color: #fff;
-    padding: 1em;
-}
-
-header.exam {
-    font-family: 'ExamLogoFont';
-    z-index: 1;
-    color: #fff;
-    padding: 1em;
-}
-
-/* Responsive Header Image */
-header img {
-    display: block;
-    margin: 0 auto; /* Center the image horizontally */
-    max-width: 100%;
-    height: auto;
-    max-height: 80px;
-}
-
-/* Image Styles */
-.blurry-hint-images {
-    filter: blur(3px); /* Adjust the value (5px) for the desired level of blur */
-    display: block;
-    margin: 0 auto; /* Center the image horizontally */
-    max-width: 60%; /* Make the image responsive to the width of its container */
-    height: auto; /* Maintain the aspect ratio */
-    margin-bottom: 80px;
-}
-
-.evidence-images {
-    display: block;
-    margin: 0 auto;
-    max-width: 60%;
-    height: auto;
-    margin-bottom: 80px;
-}
-
-/* Text Styles */
 h1, h2, label {
     color: white;
     text-align: center;
-    padding-bottom: 10px;
 }
 
 h3 {
     color: fuchsia;
-    text-align: center;
-    padding-bottom: 10px;
-    font-size: 50px
-}
-
-/* Paragraphy Styles */
-.small-title {
+    font-size: 50px;
     text-align: center;
 }
 
-p {
-    padding-left: 1em;
-    padding-right: 3em;
-    color: white;
-    padding-bottom: 10px;
-    line-height: 180%
+/* =======================================
+   STORY BUTTONS (INDEX PAGE)
+======================================= */
+
+.story-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
 }
 
-.laptop p {
-    font-family: 'LaptopFont';
+.story-button button {
+    border: none;
+    background: transparent;
+    width: 90%;
+    padding: 0;
 }
 
-.spy p {
+.story-button button img {
+    width: 100%;
+    display: block;
+}
+
+/* CLEAR overlay */
+.clear-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00ff99;
+    font-size: 2rem;
     font-family: 'SpyFont';
+    font-weight: bold;
+    background: rgba(0,0,0,0.6);
+    padding: 18px 35px;
+    border-radius: 18px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
 }
 
-.exam p {
-    font-family: 'ExamFont';
+.story-item.cleared img {
+    filter: brightness(30%);
 }
 
-.small-ref-text {
-    font-size: small;
-    color: #ececec;
-    display: block;
-    text-align: center;
-    padding-top: 1em
+.story-item.cleared .clear-badge {
+    opacity: 1;
 }
 
-.warning {
-    color: white; 
-    text-align: center;
-    display: block;
-}
+/* =======================================
+   BUTTONS
+======================================= */
 
-.small-title {
-    text-align: center;
-}
-
-/* Button Styles */
 button {
     background-color: #555;
-    color: #fff;
+    color: white;
     padding: 1em;
-    margin-bottom: 10em;
-    margin-top: 1em;
+    border-radius: 1cm;
     border: none;
     cursor: pointer;
-    width: auto; /* Adjust the width of the buttons as needed */
-    max-width: 100%; /* Set a maximum width if desired */
-    border-radius: 1cm;
 }
 
 button:hover {
     background-color: #777;
 }
 
-/* Index page Story Buttons */
-.story-button {
-    display: flex;
-    justify-content: center;
-}
-
-.story-button button {
-    border: none;
-    background-color: transparent;
-    color: #fff;
-    cursor: pointer;
-    padding: 1em;
-    width: 90%;
-    max-width: none;
-}
-
-.story-button button img {
-    max-width: 90%;
-    max-height: auto;
-}
-
-/* Next Story Button */
 .next-story-button {
     display: flex;
     justify-content: center;
 }
 
 .next-story-button button {
-    font-size: 12pt;
     background-color: #222;
-    border-radius: 1cm;
 }
 
-body.laptop button {
-    font-family: 'LaptopFont'
-}
+/* =======================================
+   INPUT FIELDS
+======================================= */
 
-body.spy button {
-    font-family: 'SpyFont';
-}
-
-body.exam button {
-    font-family: 'ExamFont';
-}
-
-.emptyInputButton {
-    margin-bottom: 0px;
-}
-
-/* Navigation Styles */
-body.index .nav {
-    display: flex;
-    justify-content: center;
-}
-
-.nav-button {
-    border: none;
-    background-color: #555;
-    cursor: pointer;
-    padding: 1em;
-    display: block;
-    margin: auto;
-}
-
-.nav-button:hover {
-    background-color: #777;
-    display: flex;
-    justify-content: center;
-}
-
-body.index .nav-button img {
-    width: 80%;
-    height: auto;
-} 
-
-/* Input Styles */
-.passcode-container {
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    justify-content: center;
-}
-
-.passcode-container button {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: medium;
-    cursor: pointer
-}
-
-.passcode-container input {
-    font-family: 'LaptopFont';
-    margin: 5px;
-    height: 60px; 
-    width: 30px;
-    border: none;
-    border-radius: 10px;
-    text-align: center;
-    font-size: x-large;
-    max-width: 20px; /* Set a maximum width if needed */
-}
-
-.spy-passcode-container {
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    justify-content: center;
-}
-
-.spy-passcode-container button {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: medium;
-    cursor: pointer
-}
-
-.spy-passcode-container input {
-    font-family: 'SpyFont';
-    margin: 5px;
-    height: 60px; 
-    width: 30px;
-    border: none;
-    border-radius: 10px;
-    text-align: center;
-    font-size: x-large;
-    max-width: 20px; /* Set a maximum width if needed */
-
-}
-
+.passcode-container,
+.spy-passcode-container,
 .exam-passcode-container {
     display: flex;
-    flex-flow: column;
-    height: 100%;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
-.exam-passcode-container button {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: medium;
-    cursor: pointer
-}
-
+.passcode-container input,
+.spy-passcode-container input,
 .exam-passcode-container input {
-    font-family: 'ExamFont';
     margin: 5px;
-    height: 60px; 
+    height: 60px;
     width: 30px;
     border: none;
     border-radius: 10px;
     text-align: center;
     font-size: x-large;
-    max-width: 20px; /* Set a maximum width if needed */
 }
 
-.passcodeInput {
-    display: flex;
-    justify-content: center;
-
-}
-
-.spy-passcodeInput {
-    display: flex;
-    justify-content: center;
-
-}
-
-.exam-passcodeInput {
-    display: flex;
-    justify-content: center;
-
-}
-
-.userInput {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-}
-
-.laptop-input {
-    font-family: 'LaptopFont';
-    margin: 10px;
-    height: 40px; /* Adjust the height as needed */
-    width: 80%; /* Adjust the width as needed */
-    max-width: 300px; /* Set a maximum width if desired */
-    border: none;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 1rem; /* Adjust the font size as needed */
-}
-
-.spy-input {
-    font-family: 'SpyFont';
-    margin: 10px;
-    height: 40px; /* Adjust the height as needed */
-    width: 80%; /* Adjust the width as needed */
-    max-width: 300px; /* Set a maximum width if desired */
-    border: none;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 1rem; /* Adjust the font size as needed */
-}
-
+.laptop-input,
+.spy-input,
 .exam-input {
-    font-family: 'ExamFont';
     margin: 10px;
-    height: 40px; /* Adjust the height as needed */
-    width: 80%; /* Adjust the width as needed */
-    max-width: 300px; /* Set a maximum width if desired */
+    height: 40px;
+    width: 80%;
+    max-width: 300px;
     border: none;
     border-radius: 10px;
     text-align: center;
-    font-size: 1rem; /* Adjust the font size as needed */
+    font-size: 1rem;
 }
 
-.userInput > .exam-input {
-    height: auto !important;
-    display: block !important;
-    margin-bottom: 10px !important;
-}
+/* =======================================
+   FOOTER
+======================================= */
 
-
-
-/* Main Content Styles */
-main {
-    flex-direction: column;
-    align-items: center;
-}
-
-.answer-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1em;
-}
-
-
-/* Footer Styles */
 footer {
     color: #fff;
     text-align: center;
+    font-size: xx-small;
     padding: 1em;
-    position: fixed; /* Change to fixed */
+    position: fixed;
     bottom: 0;
     width: 100%;
-    font-size: xx-small;
-    clear: both;
 }
 
+/* =======================================
+   MOBILE RESPONSIVE
+======================================= */
 
-/* Mobile Styles */
 @media (max-width: 600px) {
-    body.index::before,
-    body.laptop::before {
-        background-size: cover; /* Zoom and cover the entire container */
-    }
-
-    .story-button {
-        display: flex;
-        justify-content: center;
-    }
-
     .story-button button {
-        width: 80%; /* Adjust the width of the buttons for mobile */
-        max-height: auto;
-        margin-bottom: 20px; /* Set the margin between buttons for mobile */
-        padding: 0.5em; /* Adjusted padding for better spacing */
+        width: 80%;
+        padding: 0.5em;
     }
-
     .story-button button img {
-        max-width: 80%;
-        max-height: auto;
+        width: 100%;
     }
-
-}
-
-.img-row {
-    display:flex;
-    justify-content: center;
-}
-
-.img-row img {
-    width:45%;
-}
-
-
-.special-input-container {
-    display: flex;
-    flex-direction: column; /* 위아래 세로 배치 */
-    gap: 10px;
-    width: 80px; /* 입력칸 크기 조절 */
-    margin: 0 auto; /* 가운데 정렬 */
-}
-
-.white-input {
-    background-color: white;
-    border: 2px solid #000;
-    height: 40px;
-    font-size: 24px;
-    text-align: center;
-}
-
-.blue-input {
-    background-color: #4ea3ff; /* 밝은 파랑 */
-    border: 2px solid #000;
-    height: 40px;
-    font-size: 24px;
-    text-align: center;
-}
-
-
-.story-wrapper {
-    position: relative;
-    display: inline-block; /* 이미지 크기 유지 */
-}
-
-.clear-badge {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    color: white;
-    font-family: 'SpyFont';
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 4px;
-
-    background: rgba(0, 0, 0, 0.55);
-    padding: 20px 40px;
-    border-radius: 20px;
-
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.3s;
-}
-
-.story-wrapper.cleared .clear-badge {
-    opacity: 1;
-}
-
-
-.cleared {
-    filter: brightness(30%);
-    position: relative;
-}
-
-.cleared::after {
-    content: "CLEAR";
-    color: #00ff99;
-    font-size: 40px;
-    font-weight: bold;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
