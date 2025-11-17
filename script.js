@@ -334,8 +334,8 @@ function playMorse() {
 }
 
 
-function checkPasscodeSs8() {
-    var raw = document.getElementById('passcodeSs8').value;
+function checkPasscodeSs7() {
+    var raw = document.getElementById('passcodeSs7').value;
 
     // 1) 모든 공백 제거
     var cleaned = raw.replace(/\s+/g, '');
@@ -361,28 +361,14 @@ function checkPasscodeSs8() {
     var answer = "히브리서9장22절";
 
     if (cleaned === answer) {
-        navigateToNextStory('spy-story-9.html');
+        localStorage.setItem('spyCleared', '1');
+        navigateToNextStory('spy-story-8.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
-        document.getElementById('passcodeSs8').value = '';
+        document.getElementById('passcodeSs7').value = '';
     }
 }
 
-
-// 예: exam 스토리 클리어
-localStorage.setItem('examCleared', 'yes');
-
-document.addEventListener("DOMContentLoaded", () => {
-    if (localStorage.getItem('examCleared') === 'yes') {
-        document.querySelector("[data-story='exam']").classList.add("cleared");
-    }
-    if (localStorage.getItem('laptopCleared') === 'yes') {
-        document.querySelector("[data-story='laptop']").classList.add("cleared");
-    }
-    if (localStorage.getItem('spyCleared') === 'yes') {
-        document.querySelector("[data-story='spy']").classList.add("cleared");
-    }
-});
 
 function resetProgress() {
     if (!confirm("정말 전체 진행상황을 초기화하시겠습니까?")) {
