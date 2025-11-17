@@ -1,60 +1,55 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script>
-    // === Temporary Access Control for Public Visitors ===
-    const launchDate = new Date('2025-11-22T15:00:00+09:00'); // 공개일: 11월 22일 15시 (KST)
-    const now = new Date();
+        /* ===== Coming Soon 접근 제한 ===== */
+        const launchDate = new Date("2025-11-22T15:00:00+09:00");
+        const now = new Date();
 
-    const params = new URLSearchParams(window.location.search);
-    const hasPreview = params.has('preview');
-    const hasCookie = document.cookie.includes('preview=1');
+        const params = new URLSearchParams(window.location.search);
+        const hasPreview = params.has("preview");
+        const hasCookie = document.cookie.includes("preview=1");
 
-    // ?preview=1로 접속하면 12시간 동안 접근 가능 쿠키 발급
-    if (hasPreview) {
-        const expiry = new Date(Date.now() + 12 * 60 * 60 * 1000).toUTCString(); // 12시간
-        document.cookie = `preview=1; path=/; expires=${expiry}`;
-        history.replaceState({}, '', location.pathname); // URL에서 ?preview 제거
-    }
-
-    const isAuthorized = hasPreview || hasCookie;
-
-    // 공개 전에는 일반 방문자는 Coming Soon으로 리다이렉트
-    if (now < launchDate && !isAuthorized) {
-        window.location.href = 'coming-soon.html';
-    }
-    </script>
-
-    
-    <title>두레교회 청년부 U TURN TO GOD</title>
-    <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* CLEAR 표시 오버레이 (이미지 위 반투명 레이어) */
-        .story-button {
-            position: relative;
-            display: flex;
-            justify-content: center;
+        if (hasPreview) {
+            const expiry = new Date(Date.now() + 12 * 60 * 60 * 1000).toUTCString();
+            document.cookie = `preview=1; path=/; expires=${expiry}`;
+            history.replaceState({}, "", location.pathname);
         }
 
+        const isAuthorized = hasPreview || hasCookie;
+
+        if (now < launchDate && !isAuthorized) {
+            window.location.href = "coming-soon.html";
+        }
+    </script>
+
+    <title>두레교회 청년부 U TURN TO GOD</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        /* 버튼 공통 wrapper */
+        .story-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* CLEAR 뱃지 */
         .clear-badge {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(0,0,0,0.6);
-            color: #00ff99;
-            padding: 8px 16px;
+            top: 8px;
+            right: 8px;
+            background: rgba(0, 0, 0, 0.65);
+            padding: 8px 18px;
             border-radius: 8px;
+            color: #00ff99;
             font-size: 20px;
             font-weight: bold;
             display: none;
         }
-
 
         /* 엔딩 버튼 */
         #ending-section {
@@ -71,106 +66,96 @@
             color: white;
         }
     </style>
-
 </head>
 
-
-
 <body class="index">
-    
     <header>
         <h3>U, TURN TO GOD</h3>
         <h2>스토리를 선택해 주세요</h2>
-    
     </header>
 
     <main>
-        
+        <!-- =============== EXAM STORY =============== -->
         <section class="story-button">
             <button onclick="navigateToStory('exam/exam.html')" class="story-item">
                 <div class="story-wrapper">
-                    <img src="images/MannaAndQuailLogo.JPG" alt="Exam Story Logo">
+                    <img src="images/MannaAndQuailLogo.JPG" alt="Exam Story Logo" />
                     <span class="clear-badge" id="exam-clear">CLEARED</span>
                 </div>
             </button>
         </section>
 
-
+        <!-- =============== LAPTOP STORY =============== -->
         <section class="story-button">
             <button onclick="navigateToStory('laptop/laptop.html')" class="story-item">
                 <div class="story-wrapper">
-                    <img src="images/RephidimLogo.jpg" alt="Laptop Story Logo">
+                    <img src="images/RephidimLogo.jpg" alt="Laptop Story Logo" />
                     <span class="clear-badge" id="laptop-clear">CLEARED</span>
                 </div>
             </button>
         </section>
 
-
+        <!-- =============== SPY STORY =============== -->
         <section class="story-button">
             <button onclick="navigateToStory('spy/spy.html')" class="story-item">
                 <div class="story-wrapper">
-                    <img src="images/GoldenCalfLogo.JPG" alt="Spy Story Logo">
+                    <img src="images/GoldenCalfLogo.JPG" alt="Spy Story Logo" />
                     <span class="clear-badge" id="spy-clear">CLEARED</span>
                 </div>
             </button>
         </section>
 
-
-        <!-- ⭐ 3개 클리어 시 엔딩 버튼 -->
+        <!-- ⭐ 모든 스토리 클리어 시 노출되는 엔딩 -->
         <section id="ending-section">
             <h2 style="color:white;">🎉 세 개의 스토리를 모두 클리어하셨습니다! 🎉</h2>
             <button onclick="window.location.href='closing.html'">클로징 영상 보러 가기</button>
         </section>
-
     </main>
 
-    
-
-
     <script src="script.js"></script>
-    
 
     <script>
-    /*  ===== CLEAR 표시 & 엔딩 버튼 표시 ===== */
+        /* ==============================
+           CLEAR 표시 & 엔딩 활성화
+        ============================== */
 
-    const examCleared = localStorage.getItem('examCleared');
-    const laptopCleared = localStorage.getItem('laptopCleared');
-    const spyCleared = localStorage.getItem('spyCleared');
+        const examCleared = localStorage.getItem("examCleared");
+        const laptopCleared = localStorage.getItem("laptopCleared");
+        const spyCleared = localStorage.getItem("spyCleared");
 
-    if (examCleared === '1') {
-        document.getElementById('exam-clear').style.display = 'block';
-    }
+        if (examCleared === "1") {
+            document.getElementById("exam-clear").style.display = "block";
+        }
+        if (laptopCleared === "1") {
+            document.getElementById("laptop-clear").style.display = "block";
+        }
+        if (spyCleared === "1") {
+            document.getElementById("spy-clear").style.display = "block";
+        }
 
-    if (laptopCleared === '1') {
-        document.getElementById('laptop-clear').style.display = 'block';
-    }
-
-    if (spyCleared === '1') {
-        document.getElementById('spy-clear').style.display = 'block';
-    }
-
-    if (examCleared === '1' && laptopCleared === '1' && spyCleared === '1') {
-        document.getElementById('ending-section').style.display = 'block';
-    }
+        if (examCleared === "1" && laptopCleared === "1" && spyCleared === "1") {
+            document.getElementById("ending-section").style.display = "block";
+        }
     </script>
 
+    <!-- 전체 진행상황 초기화 버튼 -->
+    <div style="text-align:center; margin-top:20px; margin-bottom:40px;">
+        <button onclick="resetProgress()" style="
+                background-color:#333;
+                color:white;
+                padding:12px 20px;
+                border:none;
+                border-radius:1cm;
+                font-size:14px;
+                cursor:pointer;
+            ">
+            전체 진행상황 초기화
+        </button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 두레교회 청년부. All rights reserved.</p>
+    </footer>
 </body>
 
-<div style="text-align:center; margin-top:20px; margin-bottom:40px;">
-    <button onclick="resetProgress()" style="
-        background-color:#333;
-        color:white;
-        padding:12px 20px;
-        border:none;
-        border-radius:1cm;
-        font-size:14px;
-        cursor:pointer;
-    ">
-        전체 진행상황 초기화
-    </button>
-</div>
-
-<footer>
-    <p>&copy; 2025 두레교회 청년부. All rights reserved.</p>
-</footer>
 </html>
