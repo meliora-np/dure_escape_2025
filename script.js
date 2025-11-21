@@ -71,7 +71,6 @@ function checkPasscodeSs7() {
                      .replace(/^히브리서(\d{1,2})장?(\d{1,3})절?$/, "히브리서$1장$2절");
 
     if (cleaned === "히브리서9장22절") {
-        localStorage.setItem('spyCleared', '1');
         navigateToNextStory('spy-story-8.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
@@ -107,7 +106,6 @@ function checkPasscodeLs5() {
 function checkPasscodeLs7() {
     var input = document.getElementById('passcodeLs7').value.toUpperCase();
     if (input === 'NISSI') {
-        localStorage.setItem('laptopCleared', '1');
         navigateToNextStory('laptop-story-8.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
@@ -149,7 +147,6 @@ function checkPasscodeEs8() {
 function checkPasscodeEs9() {
     var v = document.getElementById('passcodeEs9').value.trim();
     if (v === '한마리양') {
-        localStorage.setItem('examCleared', '1');
         navigateToNextStory('exam-story-10.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
@@ -233,3 +230,5 @@ function resetProgress() {
     alert("전체 진행상황이 초기화되었습니다!");
     location.reload();
 }
+
+

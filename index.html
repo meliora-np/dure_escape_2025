@@ -1,171 +1,140 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>두레교회 청년부 U TURN TO GOD</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles.css">
+<title>두레교회 청년부 U TURN TO GOD</title>
+<link rel="stylesheet" href="styles.css">
 
-    <style>
-        /* CLEAR 오버레이 — 올바르게 중앙에 표시됨 */
-        .story-wrapper {
-            position: relative;
-            display: inline-block;
-        }
+<style>
+    .story-wrapper {
+        position: relative;
+        width: 90%;
+        max-width: 500px;
+        margin: 20px auto;
+    }
 
-        .clear-badge {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #00ff99;
-            font-size: 40px;
-            font-weight: bold;
-            background: rgba(0,0,0,0.55);
-            padding: 20px 40px;
-            border-radius: 20px;
-            opacity: 0;
-            pointer-events: none;
-            transition: 0.3s;
-        }
+    .story-wrapper img {
+        width: 100%;
+        display: block;
+        border-radius: 12px;
+    }
 
-        .story-wrapper.cleared .clear-badge {
-            opacity: 1;
-        }
+    .story-wrapper.cleared img {
+        filter: brightness(40%);
+    }
 
-        /* CLEAR 뱃지가 버튼 클릭 막는 문제 해결 */
-        .story-wrapper,
-        .story-wrapper * {
-            pointer-events: none;
-        }
+    .clear-badge {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0,0,0,0.55);
+        padding: 15px 30px;
+        color: #00ff99;
+        font-family: 'SpyFont';
+        font-size: 28px;
+        letter-spacing: 4px;
+        border-radius: 16px;
+        font-weight: bold;
+        display: none;
+    }
 
-        .story-wrapper img,
-        .story-item {
-            pointer-events: auto;
-        }
+    .story-wrapper.cleared .clear-badge {
+        display: block;
+    }
 
-        /* 엔딩 버튼 */
-        #ending-section {
-            display: none;
-            margin-top: 30px;
-            text-align: center;
-        }
+    #ending-section {
+        display: none;
+        margin-top: 40px;
+        text-align: center;
+    }
 
-        #ending-section button {
-            background-color: #0099ff;
-            padding: 1em 2em;
-            font-size: 20px;
-            border-radius: 20px;
-            color: white;
-        }
-    </style>
-
+    #ending-section button {
+        background-color: #0099ff;
+        padding: 1em 2em;
+        font-size: 20px;
+        border-radius: 20px;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
 </head>
 
 <body class="index">
 
-    <!-- HEADER -->
-    <header>
-        <h3>U, TURN TO GOD</h3>
-        <h2>스토리를 선택해 주세요</h2>
-    </header>
+<header>
+    <h3>U, TURN TO GOD</h3>
+    <h2>스토리를 선택해 주세요</h2>
+</header>
 
-    <!-- MAIN -->
-    <main>
+<main>
 
-        <!-- EXAM -->
-        <section class="story-button">
-            <div class="story-wrapper">
-                <button onclick="navigateToStory('exam/exam.html')" class="story-item">
-                    <img src="images/MannaAndQuailLogo.JPG" alt="Exam Story Logo">
-                </button>
-                <div class="clear-badge" id="exam-clear">CLEAR</div>
-            </div>
-        </section>
-
-        <!-- LAPTOP -->
-        <section class="story-button">
-            <div class="story-wrapper">
-                <button onclick="navigateToStory('laptop/laptop.html')" class="story-item">
-                    <img src="images/RephidimLogo.jpg" alt="Laptop Story Logo">
-                </button>
-                <div class="clear-badge" id="laptop-clear">CLEAR</div>
-            </div>
-        </section>
-
-        <!-- SPY -->
-        <section class="story-button">
-            <div class="story-wrapper">
-                <button onclick="navigateToStory('spy/spy.html')" class="story-item">
-                    <img src="images/GoldenCalfLogo.JPG" alt="Spy Story Logo">
-                </button>
-                <div class="clear-badge" id="spy-clear">CLEAR</div>
-            </div>
-        </section>
-
-        <!-- ALL CLEARED ENDING -->
-        <section id="ending-section">
-            <h2 style="color:white;">🎉 세 개의 스토리를 모두 클리어하셨습니다! 🎉</h2>
-            <button onclick="window.location.href='closing.html'">클로징 영상 보러 가기</button>
-        </section>
-
-    </main>
-
-    <!-- RESET BUTTON -->
-    <div style="text-align:center; margin-top:20px; margin-bottom:40px;">
-        <button onclick="resetProgress()" style="
-            background-color:#333;
-            color:white;
-            padding:12px 20px;
-            border:none;
-            border-radius:1cm;
-            font-size:14px;
-            cursor:pointer;
-        ">
-            전체 진행상황 초기화
-        </button>
+    <!-- EXAM -->
+    <div class="story-wrapper" id="exam-wrapper">
+        <img src="images/MannaAndQuailLogo.JPG" onclick="navigateToStory('exam/exam.html')">
+        <div class="clear-badge">CLEARED</div>
     </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 두레교회 청년부. All rights reserved.</p>
-    </footer>
+    <!-- LAPTOP -->
+    <div class="story-wrapper" id="laptop-wrapper">
+        <img src="images/RephidimLogo.jpg" onclick="navigateToStory('laptop/laptop.html')">
+        <div class="clear-badge">CLEARED</div>
+    </div>
 
+    <!-- SPY -->
+    <div class="story-wrapper" id="spy-wrapper">
+        <img src="images/GoldenCalfLogo.JPG" onclick="navigateToStory('spy/spy.html')">
+        <div class="clear-badge">CLEARED</div>
+    </div>
 
-    <!-- JS (너가 기존 script.js에 넣어둔 기능 그대로 유지하도록 아래는 최소한만 넣음) -->
-    <script>
-        function navigateToStory(page) {
-            window.location.href = page;
+    <!-- 3개 클리어 시 -->
+    <section id="ending-section">
+        <h2 style="color:white;">🎉 세 개의 스토리를 모두 클리어하셨습니다! 🎉</h2>
+        <button onclick="window.location.href='closing.html'">클로징 영상 보러 가기</button>
+    </section>
+
+</main>
+
+<div style="text-align:center; margin-top:20px; margin-bottom:80px;">
+    <button onclick="resetProgress()" style="
+        background-color:#333;
+        color:white;
+        padding:12px 20px;
+        border:none;
+        border-radius:1cm;
+        font-size:14px;
+        cursor:pointer;">
+        전체 진행상황 초기화
+    </button>
+</div>
+
+<footer>
+    <p>&copy; 2025 두레교회 청년부. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+    // ====== CLEAR 표시 ======
+    function updateClearStatus() {
+        const exam = localStorage.getItem('examCleared') === '1';
+        const laptop = localStorage.getItem('laptopCleared') === '1';
+        const spy = localStorage.getItem('spyCleared') === '1';
+
+        if (exam) document.getElementById('exam-wrapper').classList.add('cleared');
+        if (laptop) document.getElementById('laptop-wrapper').classList.add('cleared');
+        if (spy) document.getElementById('spy-wrapper').classList.add('cleared');
+
+        if (exam && laptop && spy) {
+            document.getElementById('ending-section').style.display = 'block';
         }
+    }
 
-        function resetProgress() {
-            if (!confirm("정말 전체 진행상황을 초기화하시겠습니까?")) return;
-
-            localStorage.removeItem('examCleared');
-            localStorage.removeItem('laptopCleared');
-            localStorage.removeItem('spyCleared');
-
-            alert("전체 진행상황이 초기화되었습니다!");
-            location.reload();
-        }
-
-        // CLEAR 표시
-        document.addEventListener("DOMContentLoaded", () => {
-            const exam = localStorage.getItem('examCleared');
-            const laptop = localStorage.getItem('laptopCleared');
-            const spy = localStorage.getItem('spyCleared');
-
-            if (exam === '1') document.getElementById('exam-clear').style.opacity = 1;
-            if (laptop === '1') document.getElementById('laptop-clear').style.opacity = 1;
-            if (spy === '1') document.getElementById('spy-clear').style.opacity = 1;
-
-            if (exam === '1' && laptop === '1' && spy === '1') {
-                document.getElementById('ending-section').style.display = "block";
-            }
-        });
-    </script>
+    updateClearStatus();
+</script>
 
 </body>
 </html>
