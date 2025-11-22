@@ -5,46 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>스토리 클리어!</title>
-    <link rel="stylesheet" href="../styles.css">
+
+    <!-- 🔥 index.html과 같은 폴더이므로 이렇게 써야 함 -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="index"> <!-- 기본 사막 배경 유지 -->
+<body class="index">  <!-- 🔥 index와 동일한 배경/폰트 적용 -->
 
-    <header>
-        <h2>🎉 스토리 3개 모두 클리어! 🎉</h2>
-    </header>
+<header style="margin-top: 40px;">
+    <h2 style="color:white;">🎉 모든 스토리를 클리어하셨습니다! 🎉</h2>
+</header>
 
-    <main style="text-align:center; color:white; padding: 20px;">
+<main style="text-align:center; color:white; padding: 20px; margin-bottom:120px;">
 
-        <p style="margin-bottom: 25px;">
-            마지막 클로징 영상을 시청하세요!
-        </p>
+    <p style="margin-bottom: 30px; font-size:18px;">
+        마지막 클로징 영상을 시청하세요!
+    </p>
 
-        <!-- 영상 -->
-        <video controls style="max-width:90%; border-radius:20px;">
-            <source src="closing-video.mp4" type="video/mp4">
-            영상을 불러올 수 없습니다.
-        </video>
+    <!-- 🔥 영상 (index와 같은 폴더) -->
+    <video 
+        controls 
+        playsinline
+        style="max-width: 90%; border-radius: 20px; margin-bottom: 35px;">
+        <source src="escape2025_closing_video.mp4" type="video/mp4">
+        영상을 불러올 수 없습니다.
+    </video>
 
-        <!-- 다시 처음으로 버튼 -->
-        <div style="margin-top: 30px;">
-            <button onclick="location.href='../index.html'" style="
-                background-color:#222;
-                color:white;
-                font-size: 16px;
-                padding: 12px 20px;
-                border-radius: 12px;
-                cursor:pointer;
-            ">
-                🔄 다시 처음으로
-            </button>
-        </div>
+    <!-- 🔄 다시 처음으로 -->
+    <button onclick="location.href='index.html'" 
+        style="
+            background-color:#222;
+            color:white;
+            font-size: 16px;
+            padding: 12px 20px;
+            border-radius: 12px;
+            cursor:pointer;
+        ">
+        🔄 다시 처음으로
+    </button>
 
-    </main>
+</main>
 
-    <footer>
-        <p>&copy; 2025 두레교회 청년부. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 두레교회 청년부. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
