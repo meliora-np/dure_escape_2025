@@ -72,31 +72,32 @@
 
 <main>
 
-    <!-- EXAM -->
-    <div class="story-wrapper" id="exam-wrapper">
-        <img src="images/MannaAndQuailLogo.JPG" onclick="navigateToStory('exam/exam.html')">
-        <div class="clear-badge">CLEARED</div>
+    <!-- EXAM STORY -->
+    <div class="story-wrapper" id="exam-wrapper" onclick="startExamStory()">
+        <img src="images/MannaAndQuailLogo.JPG">
+        <div class="clear-badge">CLEAR</div>
     </div>
 
-    <!-- LAPTOP -->
-    <div class="story-wrapper" id="laptop-wrapper">
-        <img src="images/RephidimLogo.jpg" onclick="navigateToStory('laptop/laptop.html')">
-        <div class="clear-badge">CLEARED</div>
+    <!-- LAPTOP STORY -->
+    <div class="story-wrapper" id="laptop-wrapper" onclick="startLaptopStory()">
+        <img src="images/RephidimLogo.jpg">
+        <div class="clear-badge">CLEAR</div>
     </div>
 
-    <!-- SPY -->
-    <div class="story-wrapper" id="spy-wrapper">
-        <img src="images/GoldenCalfLogo.JPG" onclick="navigateToStory('spy/spy.html')">
-        <div class="clear-badge">CLEARED</div>
+    <!-- SPY STORY -->
+    <div class="story-wrapper" id="spy-wrapper" onclick="startSpyStory()">
+        <img src="images/GoldenCalfLogo.JPG">
+        <div class="clear-badge">CLEAR</div>
     </div>
 
-    <!-- 3개 클리어 시 -->
+    <!-- 3개 클리어 시 나타나는 버튼 -->
     <section id="ending-section">
         <h2 style="color:white;">🎉 세 개의 스토리를 모두 클리어하셨습니다! 🎉</h2>
-        <button onclick="window.location.href='closing.html'">클로징 영상 보러 가기</button>
+        <button onclick="location.href='closing.html'">클로징 영상 보러 가기</button>
     </section>
 
 </main>
+
 
 <div style="text-align:center; margin-top:20px; margin-bottom:80px;">
     <button onclick="resetProgress()" style="
@@ -117,23 +118,22 @@
 
 <script src="script.js"></script>
 
+<!-- CLEAR 오버레이 & 엔딩버튼 스크립트 -->
 <script>
-    // ====== CLEAR 표시 ======
-    function updateClearStatus() {
-        const exam = localStorage.getItem('examCleared') === '1';
-        const laptop = localStorage.getItem('laptopCleared') === '1';
-        const spy = localStorage.getItem('spyCleared') === '1';
+document.addEventListener("DOMContentLoaded", function () {
 
-        if (exam) document.getElementById('exam-wrapper').classList.add('cleared');
-        if (laptop) document.getElementById('laptop-wrapper').classList.add('cleared');
-        if (spy) document.getElementById('spy-wrapper').classList.add('cleared');
+    const exam = localStorage.getItem('examCleared') === '1';
+    const laptop = localStorage.getItem('laptopCleared') === '1';
+    const spy = localStorage.getItem('spyCleared') === '1';
 
-        if (exam && laptop && spy) {
-            document.getElementById('ending-section').style.display = 'block';
-        }
+    if (exam) document.getElementById("exam-wrapper").classList.add("cleared");
+    if (laptop) document.getElementById("laptop-wrapper").classList.add("cleared");
+    if (spy) document.getElementById("spy-wrapper").classList.add("cleared");
+
+    if (exam && laptop && spy) {
+        document.getElementById("ending-section").style.display = "block";
     }
-
-    updateClearStatus();
+});
 </script>
 
 </body>
