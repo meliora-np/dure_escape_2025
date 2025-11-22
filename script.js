@@ -30,15 +30,15 @@ function startExamStory() {
 
 
 function goExamIntro() {
-    window.location.href = './exam/exam.html';
+    window.location.href = 'exam/exam.html';
 }
 
 function goLaptopIntro() {
-    window.location.href = './laptop/laptop.html';
+    window.location.href = 'laptop/laptop.html';
 }
 
 function goSpyIntro() {
-    window.location.href = './spy/spy.html';
+    window.location.href = 'spy/spy.html';
 }
 
 
