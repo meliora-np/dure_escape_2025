@@ -117,36 +117,27 @@ function checkPasscodeSs4() {
 function checkPasscodeSs7() {
     let raw = document.getElementById('passcodeSs7').value.trim();
 
-    // 공백 및 기본 정리
     let cleaned = raw
-        .replace(/\s+/g, '')
-        .replace(/히브[^0-9]*/, "히브리서")  // 히 / 히브 / 히브리 → 히브리서
-        .replace(/:/g, "장")                // 9:22 → 9장22
-        .replace(/절|장장/g, "장")         // 중복/이상한 절 처리
-        .replace(/[^0-9장히브리서]/g, "");  // 숫자/한글만 남기기
+        .replace(/\s+/g, '')                 // 모든 공백 제거
+        .replace(/히브리서?/g, '히브리서')  // '히브리', '히브리서', '히브' → 전부 히브리서
+        .replace(/:/g, '장')                 // 9:22 → 9장22
+        .replace(/절/g, '')                  // 절 제거 (나중 한 번에 붙이기)
+        .replace(/장/g, '장')                 // 형식 유지
+        .replace(/-/g, '')                    // 불필요 문자 제거
+        .replace(/\./g, '')                   // 마침표 제거
+        .replace(/(\d{1,2})장(\d{1,3})$/, '$1장$2절');  // '9장22' → '9장22절'
 
-    // 숫자 찾기
-    let match = cleaned.match(/히브리서(\d{1,2})장(\d{1,3})/);
+    console.log("Cleaned:", cleaned);  // 디버깅용(나중 필요하면 지워도 됨)
 
-    if (!match) {
-        alert("비밀번호가 잘못되었습니다.");
-        document.getElementById('passcodeSs7').value = '';
-        return;
-    }
-
-    let chapter = match[1];
-    let verse = match[2];
-
-    let final = `히브리서${chapter}장${verse}절`;
-
-    if (final === "히브리서9장22절") {
-        localStorage.setItem('spyCleared','1');
+    if (cleaned === "히브리서9장22절") {
+        localStorage.setItem('spyCleared', '1');
         navigateToNextStory('spy-story-8.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
         document.getElementById('passcodeSs7').value = '';
     }
 }
+
 
 
 
