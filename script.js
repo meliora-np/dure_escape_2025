@@ -117,26 +117,22 @@ function checkPasscodeSs4() {
 function checkPasscodeSs7() {
     let raw = document.getElementById('passcodeSs7').value.trim();
 
-    let cleaned = raw
-        .replace(/\s+/g, '')                 // 모든 공백 제거
-        .replace(/히브리서?/g, '히브리서')  // '히브리', '히브리서', '히브' → 전부 히브리서
-        .replace(/:/g, '장')                 // 9:22 → 9장22
-        .replace(/절/g, '')                  // 절 제거 (나중 한 번에 붙이기)
-        .replace(/장/g, '장')                 // 형식 유지
-        .replace(/-/g, '')                    // 불필요 문자 제거
-        .replace(/\./g, '')                   // 마침표 제거
-        .replace(/(\d{1,2})장(\d{1,3})$/, '$1장$2절');  // '9장22' → '9장22절'
+    // 공백 전부 제거
+    let cleaned = raw.replace(/\s+/g, '');
 
-    console.log("Cleaned:", cleaned);  // 디버깅용(나중 필요하면 지워도 됨)
+    // 정답 2개 형태
+    const answer1 = "히브리서9장22절";     // 히브리서9장22절
+    const answer2 = "히브리서9장22절";     // 히브리서 9장 22절 → 공백 제거되면 동일
 
-    if (cleaned === "히브리서9장22절") {
-        localStorage.setItem('spyCleared', '1');
+    if (cleaned === answer1 || cleaned === answer2) {
+        localStorage.setItem('spyCleared','1');
         navigateToNextStory('spy-story-8.html');
     } else {
         alert("비밀번호가 잘못되었습니다.");
         document.getElementById('passcodeSs7').value = '';
     }
 }
+
 
 
 
