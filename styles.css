@@ -597,17 +597,6 @@ footer {
     position: relative;
 }
 
-.cleared::after {
-    content: "CLEAR";
-    color: #00ff99;
-    font-size: 40px;
-    font-weight: bold;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 
 .story-wrapper {
     border: none;
