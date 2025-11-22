@@ -607,3 +607,13 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+.story-wrapper {
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
