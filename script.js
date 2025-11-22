@@ -13,33 +13,17 @@ function navigateToNextStory(nextStory) {
 }
 
 function startLaptopStory() {
-    window.location.href = 'laptop/laptop-story-1.html';
-}
-
-function startSpyStory() {
-    window.location.href = 'spy/spy-story-1.html';
-}
-
-function startExamStory() {
-    window.location.href = 'exam/exam-story-1.html';
-}
-
-
-
-
-
-
-function goExamIntro() {
-    window.location.href = 'exam/exam.html';
-}
-
-function goLaptopIntro() {
     window.location.href = 'laptop/laptop.html';
 }
 
-function goSpyIntro() {
+function startSpyStory() {
     window.location.href = 'spy/spy.html';
 }
+
+function startExamStory() {
+    window.location.href = 'exam/exam.html';
+}
+
 
 
 
