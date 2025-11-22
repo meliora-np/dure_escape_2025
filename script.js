@@ -216,3 +216,16 @@ function resetProgress() {
 function playMorse() {
     document.getElementById("morseSound").play();
 }
+
+
+function startExamStory() {
+    window.location.href = 'exam/exam.html';
+}
+
+function startLaptopStory() {
+    window.location.href = 'laptop/laptop.html';
+}
+
+function startSpyStory() {
+    window.location.href = 'spy/spy.html';
+}
